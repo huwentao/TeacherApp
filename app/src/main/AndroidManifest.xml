@@ -6,7 +6,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name=".ui.TAApplication">
         <activity
             android:name=".ui.BaseActivity"
             android:label="@string/title_activity_base" >
@@ -19,6 +20,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ta.mokeyh.teacherapp.ui.BaseActivity" />
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.TalkService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".ui.activity.DrawerActivity"
+            android:label="@string/title_activity_drawer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
