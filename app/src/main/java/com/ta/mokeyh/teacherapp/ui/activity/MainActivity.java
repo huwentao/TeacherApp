@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * A placeholder fragment containing a simple view.
+     * A placeholder fragment containing a simple -0.
      */
     public static class PlaceholderFragment extends Fragment {
         /**

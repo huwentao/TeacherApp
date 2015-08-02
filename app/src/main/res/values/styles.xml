@@ -4,8 +4,10 @@
     <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowActionBar">false</item>-->
+        <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@color/windowBackground</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--<item name="android:textColorPrimary">@color/textColorPrimary</item>-->
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,29 +18,30 @@
         <item name="android:editTextStyle">@style/AppEditTextStyle</item>
     </style>
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="AppTheme.Base">
         <!-- Customize your theme here. -->
     </style>
 
     <style name="AppButtonStyle">
         <!-- Customize your theme here. -->
+        <item name="android:background">@drawable/sel_button_yellow</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="AppEditTextStyle" parent="Widget.AppCompat.EditText">
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/textColorBlack</item>
-        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="android:textColorHint">@color/colorAccentLight</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">?attr/editTextBackground</item>
     </style>
 
     <style name="AppTextStyle" >
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/textColorBlack</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
     </style>
