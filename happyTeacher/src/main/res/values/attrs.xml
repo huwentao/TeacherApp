@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabView">
+        <attr name="TabImageSrc" format="reference"/>
+        <attr name="TabImageTargetWidth" format="dimension"/>
+        <attr name="TabImageColor" format="color"/>
+        <attr name="TabImageColorPress" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TabImageView">
+        <attr name="TabImageImageSrc" format="reference"/>
+        <attr name="TabImageImageTargetWidth" format="dimension"/>
+        <attr name="TabImageImageColor" format="color"/>
+        <attr name="TabImageImageColorPress" format="color"/>
+    </declare-styleable>
+</resources>

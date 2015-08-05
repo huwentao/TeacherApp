@@ -2,14 +2,10 @@ package www.ht.com.ap.base;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
-import android.view.LayoutInflater;
+import android.support.v4.app.Fragment;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import butterknife.ButterKnife;
-import www.ht.com.ap.R;
 
 /**
  * A simple {@link Fragment} subclass.

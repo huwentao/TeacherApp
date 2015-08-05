@@ -1,7 +1,9 @@
-package www.ht.com.ap.ui;
+package www.ht.com.ap.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +14,7 @@ import android.view.MenuItem;
 import butterknife.Bind;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseActivity;
+import www.ht.com.ap.ui.fragment.FindTeacherFM;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,6 +40,11 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         setupDrawerContent(navigationView);
+
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.container, new FindTeacherFM(), FindTeacherFM.class.getName());
+        transaction.commit();
     }
 
     public void restoreActionBar(String mTitle) {
