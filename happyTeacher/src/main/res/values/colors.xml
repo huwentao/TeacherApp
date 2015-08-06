@@ -17,7 +17,7 @@
     <color name="textColorHint2">#BDBDBD</color>
     <color name="textColorWhite">#FFFFFF</color>
 
-    <color name="tabImageBackground">#212121</color>
+    <color name="tabImageBackground">#546e7a</color>
     <color name="tabImageBackgroundPress">#FF9800</color>
 
     <color name="background_gradient_start">#000000</color>

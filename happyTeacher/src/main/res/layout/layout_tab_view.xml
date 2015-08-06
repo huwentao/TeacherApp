@@ -7,8 +7,7 @@
     android:background="@color/transparent"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingBottom="2dp"
-    android:paddingTop="3dp"
+    android:paddingTop="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <www.ht.com.ap.view.TabImageView
@@ -20,7 +19,7 @@
     <TextView
         android:id="@+id/tabViewText"
         style="@style/TabViewTextStyle"
-        android:layout_width="@dimen/tabview_layout_height"
+        android:layout_width="@dimen/tabview_layout_width"
         android:layout_height="wrap_content"
         android:text="主页"/>
 </LinearLayout>

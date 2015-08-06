@@ -13,16 +13,16 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import www.ht.com.ap.R;
-import www.ht.com.ap.tools.DisplayUtil;
 
 /**
  * Created by mokey on 2015/8/5.
  */
 public class TabImageView extends ImageView {
-    private float imageSize;
-    private static Bitmap mBitmap;
-    private static Bitmap mBitmapPress;
-    private Paint paint;
+    private int mBitmapColor;
+    private int mBitmapColorPress;
+    private float mImageSize;
+    private Bitmap mBitmap;
+    private Paint mPaint;
     private boolean isChecked = false;
 
     public TabImageView(Context context) {
@@ -31,28 +31,17 @@ public class TabImageView extends ImageView {
 
     public TabImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        paint = new Paint();
+        mPaint = new Paint();
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TabImageView);
-        Bitmap mBitmap = null;
-        Bitmap mBitmapPress = null;
-        Bitmap tempBitmap = null;
-
         Drawable drawable = typedArray.getDrawable(R.styleable.TabImageView_TabImageImageSrc);
         if (drawable != null) {
-            tempBitmap = ((BitmapDrawable) drawable).getBitmap();
+            mBitmap = ((BitmapDrawable) drawable).getBitmap();
         }
-        imageSize = typedArray.getDimension(R.styleable.TabImageView_TabImageImageTargetWidth, 0);
-        int bitmapColor = typedArray.getColor(R.styleable.TabImageView_TabImageImageColor, 0);
-        if (bitmapColor > 0) {
-            mBitmap = getAlphaBitmap(tempBitmap, imageSize, bitmapColor);
-        }
-        int bitmapColorPress = typedArray.getColor(R.styleable.TabImageView_TabImageImageColor, 0);
-        if (bitmapColorPress > 0) {
-            mBitmapPress = getAlphaBitmap(tempBitmap, imageSize, bitmapColorPress);
-        }
+        mImageSize = typedArray.getDimension(R.styleable.TabImageView_TabImageImageTargetWidth, 0);
+        mBitmapColor = typedArray.getColor(R.styleable.TabImageView_TabImageImageColor, 0);
+        mBitmapColorPress = typedArray.getColor(R.styleable.TabImageView_TabImageImageColorPress, 0);
 
-        init(mBitmap, mBitmapPress);
         typedArray.recycle();
     }
 
@@ -62,16 +51,14 @@ public class TabImageView extends ImageView {
 
     @Override
     protected void onDraw(@NonNull Canvas canvas) {
-        if (!isChecked && mBitmap != null) {
-            float left =  Math.abs(imageSize - mBitmap.getWidth())/2;
-            System.out.println("left=>"+left);
-            canvas.drawBitmap(mBitmap, 0, 0, paint);
-        } else if (mBitmapPress != null) {
-            float left =  Math.abs(imageSize - mBitmapPress.getWidth())/2;
-            System.out.println("left=>"+left);
-            canvas.drawBitmap(mBitmapPress, 0, 0, paint);
-        } else {
+        if (mBitmap == null) {
             super.onDraw(canvas);
+            return;
+        }
+        if (!isChecked) {
+            drawAlphaBitmap(canvas, mBitmap, mImageSize, mBitmapColor);
+        } else {
+            drawAlphaBitmap(canvas, mBitmap, mImageSize, mBitmapColorPress);
         }
     }
 
@@ -85,9 +72,11 @@ public class TabImageView extends ImageView {
     }
 
 
-    public void init(Bitmap bitmap, Bitmap bitmapPress) {
+    public void init(Bitmap bitmap,int bitmapColor, int bitmapColorPress, float imageSize) {
         mBitmap = bitmap;
-        mBitmapPress = bitmapPress;
+        mBitmapColor = bitmapColor;
+        mBitmapColorPress = bitmapColorPress;
+        mImageSize = imageSize;
     }
 
     /**
@@ -97,25 +86,23 @@ public class TabImageView extends ImageView {
      * @param mColor
      * @return
      */
-    public Bitmap getAlphaBitmap(Bitmap mBitmap, float imageSize, int mColor) {
+    public void drawAlphaBitmap(Canvas mCanvas, Bitmap mBitmap, float imageSize, int mColor) {
         if (mBitmap != null) {
-            Bitmap mAlphaBitmap = Bitmap.createBitmap(mBitmap.getWidth(), mBitmap.getHeight(), Bitmap.Config.ARGB_8888);
-
-            Matrix matrix = new Matrix();
-            float scalex = (float) DisplayUtil.dip2px(getContext(), imageSize) / mAlphaBitmap.getWidth();
-            matrix.setScale(scalex, scalex);
-
-            Canvas mCanvas = new Canvas(mAlphaBitmap);
-            Paint mPaint = new Paint();
-
+            mPaint.reset();
             mPaint.setColor(mColor);
             //从原位图中提取只包含alpha的位图
             Bitmap alphaBitmap = mBitmap.extractAlpha();
-            //在画布上（mAlphaBitmap）绘制alpha位图
-            mCanvas.drawBitmap(alphaBitmap, matrix, mPaint);
+            Matrix matrix = new Matrix();
+            float scalex = imageSize / mBitmap.getWidth();
+            matrix.setScale(scalex, scalex);
 
-            return mAlphaBitmap;
+            Bitmap mAlphaBitmap = Bitmap.createBitmap(alphaBitmap,
+                    0, 0,
+                    mBitmap.getWidth(), mBitmap.getHeight(),
+                    matrix,
+                    false);
+            //在画布上（mAlphaBitmap）绘制alpha位图
+            mCanvas.drawBitmap(mAlphaBitmap, 0, 0, mPaint);
         }
-        return null;
     }
 }
