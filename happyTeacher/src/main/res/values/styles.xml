@@ -50,5 +50,20 @@
         <item name="android:background">@color/windowBackground</item>
     </style>
 
+    <style name="TabViewTextStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:width">@dimen/tabview_layout_width</item>
+        <item name="android:height">@dimen/tabview_layout_height</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">3</item>
+    </style>
 
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabSelectedTextColor">@color/textColorWhite</item>
+    </style>
 </resources>

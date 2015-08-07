@@ -19,4 +19,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">展开</string>
     <string name="drawer_close">关闭</string>
+    <string name="icon_find_text">找老师</string>
+    <string name="icon_review_text">评论圈</string>
+    <string name="icon_course_text">课程</string>
+    <string name="icon_discover_text">发现</string>
+    <string name="courseWeekType">本周课程</string>
+    <string name="courseMonthType">本月课程</string>
 </resources>

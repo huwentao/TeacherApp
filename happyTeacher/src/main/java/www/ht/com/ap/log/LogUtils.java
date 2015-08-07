@@ -13,10 +13,12 @@
  * limitations under the License.
  */
 
-package www.ht.com.ap.tools;
+package www.ht.com.ap.log;
 
 import android.text.TextUtils;
 import android.util.Log;
+
+import www.ht.com.ap.tools.OtherUtils;
 
 /**
  * Log工具，类似android.util.Log。

@@ -1,7 +1,9 @@
-package www.ht.com.ap.ui;
+package www.ht.com.ap.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -9,9 +11,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseActivity;
+import www.ht.com.ap.base.BaseFragment;
+import www.ht.com.ap.ui.fragment.CourseDetailFragment;
+import www.ht.com.ap.ui.fragment.CourseFragment;
+import www.ht.com.ap.ui.fragment.DiscoverFragment;
+import www.ht.com.ap.ui.fragment.FindTeacherFragment;
+import www.ht.com.ap.ui.fragment.ReviewFragment;
+import www.ht.com.ap.view.TabViewLayout;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,8 +34,12 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.drawer_layout) DrawerLayout mDrawerLayout;
     @Bind(R.id.navigationView) NavigationView navigationView;
     @Bind(R.id.toolbar) Toolbar toolbar;
+    @Bind(R.id.tabViewLayout) TabViewLayout tabViewLayout;
 
     private ActionBarDrawerToggle mDrawerToggle;
+    private List<BaseFragment> fragments = new ArrayList<>();
+    private FragmentManager fragmentManager;
+    private int showIndex = 2; //初始化显示的fragment位置
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +53,32 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         setupDrawerContent(navigationView);
+
+        fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        fragments.add(new FindTeacherFragment());
+        fragments.add(new ReviewFragment());
+        fragments.add(new CourseFragment());
+        fragments.add(new DiscoverFragment());
+        transaction.add(R.id.container, fragments.get(0), fragments.get(0).getName());
+        transaction.add(R.id.container, fragments.get(1), fragments.get(1).getName());
+        transaction.add(R.id.container, fragments.get(2), fragments.get(2).getName());
+        transaction.add(R.id.container, fragments.get(3), fragments.get(3).getName());
+        for (int i = 0; i < fragments.size(); i++) {
+            if(i!=showIndex) {
+                transaction.hide(fragments.get(i));
+            }
+        }
+        transaction.commit();
+
+
+        tabViewLayout.setmOnTabViewChangeListener(new TabViewLayout.OnTabViewChangeListener() {
+            @Override
+            public void onChange(int index) {
+                showFragment(index);
+            }
+        });
+        tabViewLayout.checkIndex(showIndex);
     }
 
     public void restoreActionBar(String mTitle) {
@@ -59,6 +101,27 @@ public class MainActivity extends BaseActivity {
                         return true;
                     }
                 });
+    }
+
+    /**
+     * 切换fragment
+     *
+     * @param index 需要显示出来的fragment的位置{@link MainActivity#fragments}
+     */
+    public void showFragment(int index) {
+        BaseFragment fragment = fragments.get(index);
+        if (!fragment.isHidden()) {
+            return;
+        }
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        for (int i = 0; i < fragments.size(); i++) {
+            if (i == index) {
+                transaction.show(fragments.get(index));
+            } else {
+                transaction.hide(fragments.get(i));
+            }
+        }
+        transaction.commit();
     }
 
     @Override
