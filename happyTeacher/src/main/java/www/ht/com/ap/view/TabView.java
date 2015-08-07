@@ -63,8 +63,7 @@ public class TabView extends LinearLayout {
      * @param imageResId
      * @param tabText
      */
-    public TabView init(int imageResId, String tabText) {
-        mTabViewImage.setImageResource(imageResId);
+    public TabView init(String tabText) {
         mTabViewText.setText(tabText);
         return this;
     }

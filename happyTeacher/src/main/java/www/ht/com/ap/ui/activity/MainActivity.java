@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private List<BaseFragment> fragments = new ArrayList<>();
     private FragmentManager fragmentManager;
-    private int showIndex = 2; //初始化显示的fragment位置
+    private int showIndex = 0; //初始化显示的fragment位置
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +70,6 @@ public class MainActivity extends BaseActivity {
             }
         }
         transaction.commit();
-
 
         tabViewLayout.setmOnTabViewChangeListener(new TabViewLayout.OnTabViewChangeListener() {
             @Override

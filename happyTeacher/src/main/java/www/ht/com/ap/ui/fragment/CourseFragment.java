@@ -14,6 +14,7 @@ import butterknife.Bind;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseFragment;
 import www.ht.com.ap.ui.fragment.adapter.CoursePagerAdapter;
+import www.ht.com.ap.ui.fragment.adapter.FindPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,11 +31,14 @@ public class CourseFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_course, container, false);
+        View view = inflater.inflate(R.layout.fragment_course, container, false);
+        tabViewLayout = (TabLayout) view.findViewById(R.id.tabViewLayout);
+        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        return view;
     }
 
-    @Bind(R.id.tabViewLayout) TabLayout tabViewLayout;
-    @Bind(R.id.viewPager) ViewPager viewPager;
+    TabLayout tabViewLayout;
+    ViewPager viewPager;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

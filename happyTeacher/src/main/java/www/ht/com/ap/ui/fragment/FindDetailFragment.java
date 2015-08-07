@@ -3,8 +3,6 @@ package www.ht.com.ap.ui.fragment;
 
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,40 +13,46 @@ import butterknife.Bind;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseFragment;
 import www.ht.com.ap.ui.fragment.adapter.CourseRecylerAdapter;
-import www.ht.com.ap.ui.fragment.adapter.FindPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
  */
-public class ReviewFragment extends BaseFragment {
+public class FindDetailFragment extends BaseFragment {
+    private static final String ARG_TITLE = "ARG_TITLE";
+    private String mParamTitle;
+
+
+    public static FindDetailFragment newInstance(String Title) {
+        FindDetailFragment fragment = new FindDetailFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_TITLE, Title);
+        fragment.setArguments(args);
+        fragment.setTitle(Title);
+        return fragment;
+    }
+
+    public FindDetailFragment() {
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (getArguments() != null) {
+            mParamTitle = getArguments().getString(ARG_TITLE);
+        }
     }
-
-    RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_review, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        return view;
+        return inflater.inflate(R.layout.fragment_find_detail, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(layoutManager);
-        CourseRecylerAdapter recylerAdapter = new CourseRecylerAdapter();
-        recyclerView.setAdapter(recylerAdapter);
-    }
 
+    }
 }

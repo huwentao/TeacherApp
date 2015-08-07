@@ -32,10 +32,10 @@ public class TabViewLayout extends LinearLayout {
         super(context, attrs);
         View view = View.inflate(context, R.layout.layout_tab_layout, this);
         ButterKnife.bind(this, view);
-        mTabViews.get(0).init(R.drawable.icon_find, context.getResources().getString(R.string.icon_find_text));
-        mTabViews.get(1).init(R.drawable.icon_review, context.getResources().getString(R.string.icon_review_text));
-        mTabViews.get(2).init(R.drawable.icon_course, context.getResources().getString(R.string.icon_course_text));
-        mTabViews.get(3).init(R.drawable.icon_heart, context.getResources().getString(R.string.icon_discover_text));
+        mTabViews.get(0).init(context.getResources().getString(R.string.icon_find_text));
+        mTabViews.get(1).init(context.getResources().getString(R.string.icon_review_text));
+        mTabViews.get(2).init(context.getResources().getString(R.string.icon_course_text));
+        mTabViews.get(3).init(context.getResources().getString(R.string.icon_discover_text));
         checkIndex(0);
     }
 

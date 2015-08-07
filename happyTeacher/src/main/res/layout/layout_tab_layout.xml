@@ -17,7 +17,7 @@
         app:TabImageColor="@color/tabImageBackground"
         app:TabImageColorPress="@color/tabImageBackgroundPress"
         app:TabImageSrc="@drawable/icon_find"
-        app:TabImageTargetWidth="20dp"
+        app:TabImageTargetWidth="22dp"
         />
 
     <www.ht.com.ap.view.TabView
@@ -29,7 +29,7 @@
         app:TabImageColor="@color/tabImageBackground"
         app:TabImageColorPress="@color/tabImageBackgroundPress"
         app:TabImageSrc="@drawable/icon_review"
-        app:TabImageTargetWidth="20dp"/>
+        app:TabImageTargetWidth="22dp"/>
 
     <www.ht.com.ap.view.TabView
         android:id="@+id/tabView_3"
@@ -40,7 +40,7 @@
         app:TabImageColor="@color/tabImageBackground"
         app:TabImageColorPress="@color/tabImageBackgroundPress"
         app:TabImageSrc="@drawable/icon_course"
-        app:TabImageTargetWidth="20dp"/>
+        app:TabImageTargetWidth="22dp"/>
 
     <www.ht.com.ap.view.TabView
         android:id="@+id/tabView_4"
@@ -50,6 +50,6 @@
         android:gravity="center"
         app:TabImageColor="@color/tabImageBackground"
         app:TabImageColorPress="@color/tabImageBackgroundPress"
-        app:TabImageSrc="@drawable/icon_heart"
-        app:TabImageTargetWidth="20dp"/>
+        app:TabImageSrc="@drawable/icon_discover"
+        app:TabImageTargetWidth="22dp"/>
 </LinearLayout>

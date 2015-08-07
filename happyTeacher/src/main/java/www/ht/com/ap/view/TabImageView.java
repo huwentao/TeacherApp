@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PaintFlagsDrawFilter;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
@@ -18,6 +19,7 @@ import www.ht.com.ap.R;
  * Created by mokey on 2015/8/5.
  */
 public class TabImageView extends ImageView {
+    private PaintFlagsDrawFilter mPaintFlagsDrawFilter;
     private int mBitmapColor;
     private int mBitmapColorPress;
     private float mImageSize;
@@ -32,6 +34,8 @@ public class TabImageView extends ImageView {
     public TabImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mPaint = new Paint();
+
+        mPaintFlagsDrawFilter = new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TabImageView);
         Drawable drawable = typedArray.getDrawable(R.styleable.TabImageView_TabImageImageSrc);
@@ -72,7 +76,7 @@ public class TabImageView extends ImageView {
     }
 
 
-    public void init(Bitmap bitmap,int bitmapColor, int bitmapColorPress, float imageSize) {
+    public void init(Bitmap bitmap, int bitmapColor, int bitmapColorPress, float imageSize) {
         mBitmap = bitmap;
         mBitmapColor = bitmapColor;
         mBitmapColorPress = bitmapColorPress;
@@ -90,6 +94,9 @@ public class TabImageView extends ImageView {
         if (mBitmap != null) {
             mPaint.reset();
             mPaint.setColor(mColor);
+            /*抗锯齿设置*/
+            mPaint.setAntiAlias(true);
+//            mCanvas.setDrawFilter(mPaintFlagsDrawFilter);
             //从原位图中提取只包含alpha的位图
             Bitmap alphaBitmap = mBitmap.extractAlpha();
             Matrix matrix = new Matrix();
@@ -101,8 +108,9 @@ public class TabImageView extends ImageView {
                     mBitmap.getWidth(), mBitmap.getHeight(),
                     matrix,
                     false);
+            float offsetx = ((float) mCanvas.getWidth() - (float) mAlphaBitmap.getWidth()) / 2;
             //在画布上（mAlphaBitmap）绘制alpha位图
-            mCanvas.drawBitmap(mAlphaBitmap, 0, 0, mPaint);
+            mCanvas.drawBitmap(mAlphaBitmap, offsetx, 0, mPaint);
         }
     }
 }
