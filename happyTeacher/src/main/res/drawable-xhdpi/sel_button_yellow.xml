@@ -3,13 +3,13 @@
     <item android:state_pressed="true">
         <shape>
             <padding android:bottom="8dp" android:top="8dp"/>
-            <solid android:color="@color/colorAccentLight"/>
+            <solid android:color="@color/buttonYellowPress"/>
         </shape>
     </item>
     <item android:state_focused="true">
         <shape>
             <padding android:bottom="8dp" android:top="8dp"/>
-            <solid android:color="@color/colorAccentLight"/>
+            <solid android:color="@color/buttonYellowPress"/>
         </shape>
     </item>
     <item android:state_enabled="false">
@@ -21,7 +21,7 @@
     <item>
         <shape>
             <padding android:bottom="8dp" android:top="8dp"/>
-            <solid android:color="@color/colorAccent"/>
+            <solid android:color="@color/buttonYellow"/>
         </shape>
     </item>
 </selector>
