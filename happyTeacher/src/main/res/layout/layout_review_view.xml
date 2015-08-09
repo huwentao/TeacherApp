@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="-2dp"
+    android:layout_marginRight="-2dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/windowBackground"
+    app:cardCornerRadius="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:src="@drawable/test_mm"
+                app:siBorderWidth="0dp"
+                />
+
+            <TextView
+                android:id="@id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/userPhoto"
+                android:paddingBottom="5dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="10dp"
+                android:text="刘先生"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/userDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_toEndOf="@id/userPhoto"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="0dp"
+                android:text="找数学老师"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_toLeftOf="@+id/unit"
+                android:text="100"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                />
+
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="8dp"
+                android:text="(元/小时)"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/lineup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_borde_blacklight"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/shape_borde_blacklight"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="学生年龄"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_borde_blacklight"
+                    android:padding="5dp"
+                    android:text="8~12岁"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/shape_borde_blacklight"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="教龄"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="1~3年"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linedown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineup"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_borde_blacklight"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="位置"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_borde_blacklight"
+                    android:padding="5dp"
+                    android:text="长沙市天心区"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="希望老师是一个有耐心、有内涵、有计划、有想法的老师"
+            android:textColor="@color/textColorLight"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_button_yellow"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="联系老师\n(1388669966)"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/textColorWhite"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_button_green"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="立即预约"
+                android:textColor="@color/textColorWhite"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

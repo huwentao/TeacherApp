@@ -39,7 +39,14 @@ public class CoursePagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
+    public long getItemId(int position) {
+        return position * 10;
+    }
+
+    @Override
     public CharSequence getPageTitle(int position) {
         return fragments.get(position).getTitle();
     }
+
+
 }

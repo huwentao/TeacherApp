@@ -10,11 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseFragment;
 import www.ht.com.ap.ui.fragment.adapter.CoursePagerAdapter;
-import www.ht.com.ap.ui.fragment.adapter.FindPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,8 +30,8 @@ public class CourseFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_course, container, false);
-        tabViewLayout = (TabLayout) view.findViewById(R.id.tabViewLayout);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        tabViewLayout = (TabLayout) view.findViewById(R.id.courseTabViewLayout);
+        viewPager = (ViewPager) view.findViewById(R.id.courseViewPager);
         return view;
     }
 

@@ -4,9 +4,8 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabViewLayout"
+        android:id="@+id/courseTabViewLayout"
         style="@style/AppTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +15,7 @@
         app:tabMode="fixed"/>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/courseViewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

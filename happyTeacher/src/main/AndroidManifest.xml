@@ -3,14 +3,12 @@
     package="www.ht.com.ap" >
 
     <application
+        android:name=".base.HTApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".base.HTApplication">
-        <activity
-            android:name=".ui.activity.MainActivity"
-            android:label="@string/app_name" >
+        android:theme="@style/AppTheme" >
+        <activity android:name=".ui.activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +18,18 @@
         <activity
             android:name=".base.BaseActivity"
             android:label="@string/title_activity_base" >
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".ui.activity.MessageActivity"
+            android:label="@string/title_activity_message" >
         </activity>
     </application>
 

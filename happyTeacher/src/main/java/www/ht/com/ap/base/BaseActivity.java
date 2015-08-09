@@ -1,5 +1,6 @@
 package www.ht.com.ap.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -20,5 +21,10 @@ public class BaseActivity extends AppCompatActivity {
 
     public CharSequence getName() {
         return getTitle();
+    }
+
+    public void callMe(Class<? extends BaseActivity> aClass) {
+        Intent intent = new Intent(this, aClass);
+        startActivity(intent);
     }
 }

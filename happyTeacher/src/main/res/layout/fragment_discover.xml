@@ -6,5 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    app:menu="@menu/discover_menu"/>
+    app:menu="@menu/discover_menu"
+    app:itemTextColor="@color/textColorBlack"
+    app:elevation="@dimen/abc_action_bar_content_inset_material"/>
 

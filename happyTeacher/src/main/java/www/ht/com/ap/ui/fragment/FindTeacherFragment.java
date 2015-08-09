@@ -33,9 +33,9 @@ public class FindTeacherFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_course, container, false);
-        tabViewLayout = (TabLayout) view.findViewById(R.id.tabViewLayout);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        View view = inflater.inflate(R.layout.fragment_find_teacher, container, false);
+        tabViewLayout = (TabLayout) view.findViewById(R.id.findTabViewLayout);
+        viewPager = (ViewPager) view.findViewById(R.id.findViewPager);
         return view;
     }
 

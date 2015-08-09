@@ -16,6 +16,7 @@ import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseFragment;
 import www.ht.com.ap.ui.fragment.adapter.CourseRecylerAdapter;
 import www.ht.com.ap.ui.fragment.adapter.FindPagerAdapter;
+import www.ht.com.ap.ui.fragment.adapter.ReviewRecyclerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,7 +48,7 @@ public class ReviewFragment extends BaseFragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        CourseRecylerAdapter recylerAdapter = new CourseRecylerAdapter();
+        ReviewRecyclerAdapter recylerAdapter = new ReviewRecyclerAdapter();
         recyclerView.setAdapter(recylerAdapter);
     }
 

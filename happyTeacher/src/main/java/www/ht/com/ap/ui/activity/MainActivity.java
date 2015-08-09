@@ -1,5 +1,6 @@
 package www.ht.com.ap.ui.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -9,12 +10,14 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import www.ht.com.ap.BuildConfig;
 import www.ht.com.ap.R;
 import www.ht.com.ap.base.BaseActivity;
 import www.ht.com.ap.base.BaseFragment;
@@ -65,9 +68,8 @@ public class MainActivity extends BaseActivity {
         transaction.add(R.id.container, fragments.get(2), fragments.get(2).getName());
         transaction.add(R.id.container, fragments.get(3), fragments.get(3).getName());
         for (int i = 0; i < fragments.size(); i++) {
-            if(i!=showIndex) {
+            if (i != showIndex)
                 transaction.hide(fragments.get(i));
-            }
         }
         transaction.commit();
 
@@ -85,7 +87,13 @@ public class MainActivity extends BaseActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(true);
-            actionBar.setTitle(mTitle);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle("");
+            if(Build.VERSION.SDK_INT> 21){
+                actionBar.setLogo(getDrawable(R.drawable.logo));
+            }else {
+                actionBar.setLogo(getResources().getDrawable(R.drawable.logo));
+            }
         }
 
     }
@@ -125,7 +133,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
@@ -134,10 +143,8 @@ public class MainActivity extends BaseActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(id==R.id.message){
+            callMe(MessageActivity.class);
         }
 
         return super.onOptionsItemSelected(item);
