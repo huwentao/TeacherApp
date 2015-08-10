@@ -56,7 +56,7 @@
     <string name="adviceHint">有什么问题，心情的吐槽吧！</string>
     <string name="adviceUserHint">手机/QQ/邮箱</string>
     <string name="send">发送</string>
-    <string name="cusServiceInfo">Copyright 2015 开心教育版权所有\n湖南开心教育科技有限公司</string>
+    <string name="cusServiceInfo">Copyright ©2015 开心教育版权所有\n湖南开心教育科技有限公司</string>
     <string name="appNameDesc">开心家教客户端</string>
     <string name="appVersionDesc">版本：1.0.0</string>
 </resources>

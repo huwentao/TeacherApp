@@ -28,7 +28,7 @@ import www.ht.com.app.view.TabViewLayout;
 public class MainActivity extends BaseActivity {
 
     /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar(String)} ()}.
+     * Used to store the last screen title. For use in {@link #restoreActionBar()} ()}.
      */
 
     @Bind(R.id.drawer_layout) DrawerLayout mDrawerLayout;
@@ -45,8 +45,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        restoreActionBar(getTitle().toString());
-
+        setToolBar(toolbar);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open,
                 R.string.drawer_close);
         mDrawerToggle.syncState();
@@ -101,8 +100,8 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    public void restoreActionBar(String mTitle) {
-        setSupportActionBar(toolbar);
+    @Override
+    protected void initToolBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(true);
@@ -114,7 +113,6 @@ public class MainActivity extends BaseActivity {
                 actionBar.setLogo(getResources().getDrawable(R.drawable.logo));
             }
         }
-
     }
 
     private void setupDrawerContent(NavigationView navigationView) {

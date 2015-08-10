@@ -1,18 +1,22 @@
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.base.BaseActivity;
 
 public class MessageActivity extends BaseActivity {
+    @Bind(R.id.toolbar) Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
+        setToolBar(toolbar);
     }
 
     @Override
