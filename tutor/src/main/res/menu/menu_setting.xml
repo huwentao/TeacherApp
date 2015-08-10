@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="www.ht.com.app.ui.activity.SettingActivity">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/icon_setabout"
+            android:title="@string/settingAbout"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/version"
+            android:icon="@drawable/icon_setversion"
+            android:title="@string/settingVersion"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/advice"
+            android:icon="@drawable/icon_setadvice"
+            android:title="@string/settingAdvice"
+            app:showAsAction="ifRoom|withText"/>
+    </group>
+
+</menu>

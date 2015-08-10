@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/tabView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/tabview_layout_height"
+    android:layout_height="@dimen/tabview_layout_width"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <www.ht.com.app.view.TabImageView
+        android:id="@+id/tabViewImage"
+        android:layout_width="@dimen/tabview_image_width"
+        android:layout_height="@dimen/tabview_image_height"
+        app:TabImageImageTargetWidth="22dp"/>
+
+    <TextView
+
+        android:id="@+id/tabViewText"
+        style="@style/TabViewTextStyle"
+        android:layout_width="@dimen/tabview_layout_width"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="主页"/>
+</LinearLayout>

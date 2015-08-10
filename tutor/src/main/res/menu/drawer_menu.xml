@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/myInfo"
+            android:icon="@drawable/icon_info"
+            android:title="@string/drawer_myinfo"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/myTeacher"
+            android:icon="@drawable/icon_teacher"
+            android:title="@string/drawer_myteacher"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/myCondition"
+            android:icon="@drawable/icon_condition"
+            android:title="@string/drawer_myCondition"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/myCourseware"
+            android:icon="@drawable/icon_course"
+            android:title="@string/drawer_courseware"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/icon_setting"
+            android:title="@string/drawer_setting"
+            app:showAsAction="ifRoom|withText"/>
+    </group>
+</menu>

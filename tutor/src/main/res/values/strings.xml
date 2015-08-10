@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">开心家教</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">展开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="icon_find_text">找老师</string>
+    <string name="icon_review_text">评论圈</string>
+    <string name="icon_course_text">课程</string>
+    <string name="icon_discover_text">发现</string>
+    <string name="courseWeekType">本周课程</string>
+    <string name="courseMonthType">本月课程</string>
+    <string name="findDetailTitle">家长要求</string>
+    <string name="findMapNearbyTitle">附近老师</string>
+    <string name="parentCommunication">家长专区</string>
+    <string name="seniority">教龄</string>
+    <string name="studentAge">学生年龄</string>
+    <string name="subject">科目</string>
+    <string name="cost">费用</string>
+    <string name="contactWay">联系方式</string>
+    <string name="location">位置</string>
+    <string name="parentAskFor">家长要求</string>
+    <string name="drawer_myinfo">我的信息</string>
+    <string name="drawer_myteacher">我的老师</string>
+    <string name="drawer_myCondition">我的需求</string>
+    <string name="drawer_setting">设置</string>
+    <string name="drawer_courseware">我的课件</string>
+    <string name="teacherCommunication">老师专区</string>
+    <string name="communication">随便聊</string>
+    <string name="studyInfo">学习资讯</string>
+    <string name="findTeacher">找老师</string>
+    <string name="action_message">消息</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="settingAbout">关于我们</string>
+    <string name="settingVersion">检查版本</string>
+    <string name="settingAdvice">意见反馈</string>
+    <string name="title_activity_about">关于我们</string>
+    <string name="title_activity_advice">意见反馈</string>
+    <string name="adviceTitle">开心家教用户体验反馈QQ群：666888</string>
+    <string name="adviceHint">有什么问题，心情的吐槽吧！</string>
+    <string name="adviceUserHint">手机/QQ/邮箱</string>
+    <string name="send">发送</string>
+    <string name="cusServiceInfo">Copyright 2015 开心教育版权所有\n湖南开心教育科技有限公司</string>
+    <string name="appNameDesc">开心家教客户端</string>
+    <string name="appVersionDesc">版本：1.0.0</string>
+</resources>
