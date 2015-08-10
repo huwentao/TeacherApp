@@ -28,7 +28,7 @@ import www.ht.com.app.view.TabViewLayout;
 public class MainActivity extends BaseActivity {
 
     /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()} ()}.
+     * Used to store the last screen title. For use in {@link #initToolBar()} ()}.
      */
 
     @Bind(R.id.drawer_layout) DrawerLayout mDrawerLayout;
@@ -95,6 +95,7 @@ public class MainActivity extends BaseActivity {
                     default:
                         return false;
                 }
+                mDrawerLayout.closeDrawers();
                 return true;
             }
         });
