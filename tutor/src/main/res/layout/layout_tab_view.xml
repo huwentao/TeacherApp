@@ -10,7 +10,7 @@
     android:orientation="vertical"
     android:paddingTop="5dp">
 
-    <www.ht.com.app.view.TabImageView
+    <www.ht.com.app.view.tabview.TabImageView
         android:id="@+id/tabViewImage"
         android:layout_width="@dimen/tabview_image_width"
         android:layout_height="@dimen/tabview_image_height"

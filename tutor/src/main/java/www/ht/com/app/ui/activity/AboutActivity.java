@@ -1,13 +1,16 @@
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseActivity;
+import www.ht.com.app.tools.AppHandler;
+import www.ht.com.app.ui.BaseActivity;
 
 public class AboutActivity extends BaseActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;

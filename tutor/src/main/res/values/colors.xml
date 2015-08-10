@@ -24,6 +24,8 @@
 
     <color name="buttonYellow">#FF9800</color>
     <color name="buttonYellowPress">#ffa726</color>
+    <color name="buttonTrans">#50424242</color>
+    <color name="buttonTransPress">#80424242</color>
 
     <color name="background_gradient_start">#000000</color>
     <color name="background_gradient_end">#DDDDDD</color>

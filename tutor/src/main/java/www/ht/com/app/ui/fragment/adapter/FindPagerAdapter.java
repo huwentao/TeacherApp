@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseFragment;
+import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.FindDetailFragment;
 import www.ht.com.app.ui.fragment.MapFragment;
 

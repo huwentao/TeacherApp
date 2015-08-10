@@ -8,7 +8,7 @@
     android:background="@color/windowBackgroundDark"
     android:orientation="horizontal">
 
-    <www.ht.com.app.view.TabView
+    <www.ht.com.app.view.tabview.TabView
         android:id="@+id/tabView_1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -20,7 +20,7 @@
         app:TabImageTargetWidth="22dp"
         />
 
-    <www.ht.com.app.view.TabView
+    <www.ht.com.app.view.tabview.TabView
         android:id="@+id/tabView_2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -31,7 +31,7 @@
         app:TabImageSrc="@drawable/icon_review"
         app:TabImageTargetWidth="22dp"/>
 
-    <www.ht.com.app.view.TabView
+    <www.ht.com.app.view.tabview.TabView
         android:id="@+id/tabView_3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -42,7 +42,7 @@
         app:TabImageSrc="@drawable/icon_course"
         app:TabImageTargetWidth="22dp"/>
 
-    <www.ht.com.app.view.TabView
+    <www.ht.com.app.view.tabview.TabView
         android:id="@+id/tabView_4"
         android:layout_width="0dp"
         android:layout_height="match_parent"

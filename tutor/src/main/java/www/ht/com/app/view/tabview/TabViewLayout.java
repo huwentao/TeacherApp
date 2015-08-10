@@ -1,4 +1,4 @@
-package www.ht.com.app.view;
+package www.ht.com.app.view.tabview;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
