@@ -1,3 +1,7 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
 <android.support.design.widget.NavigationView
     android:id="@+id/navigationView"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,3 +12,4 @@
     app:menu="@menu/menu_setting"
     app:itemTextColor="@color/textColorBlack"
     app:elevation="@dimen/abc_action_bar_content_inset_material"/>
+</LinearLayout>
