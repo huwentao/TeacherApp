@@ -1,4 +1,4 @@
-package www.ht.com.app.base;
+package www.ht.com.app.ui;
 
 import android.app.Activity;
 import android.app.Application;
@@ -12,7 +12,7 @@ import www.ht.com.app.db.DbUtils;
 /**
  * Created by mokey on 2015/8/4.
  */
-public class HTApplication extends Application {
+public class TutorApplication extends Application {
     private DbUtils dbUtils;
 
     @Override
@@ -20,9 +20,9 @@ public class HTApplication extends Application {
         super.onCreate();
         String LogTag = getPackageName().toLowerCase();
         Logger.init(LogTag)               // default PRETTYLOGGER or use just init()
-                .setMethodCount(3)            // default 2
+                .setMethodCount(1)            // default 2
                 .hideThreadInfo()             // default shown
-                .setLogLevel(LogLevel.NONE);  // default LogLevel.FULL
+                .setLogLevel(LogLevel.FULL);  // default LogLevel.FULL
 //                .setMethodOffset(2);          // default 0
 
         dbUtils = DbUtils.create(this);

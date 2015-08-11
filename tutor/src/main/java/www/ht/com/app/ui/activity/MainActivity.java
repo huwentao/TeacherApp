@@ -17,8 +17,8 @@ import java.util.List;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseActivity;
-import www.ht.com.app.base.BaseFragment;
+import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.CourseFragment;
 import www.ht.com.app.ui.fragment.DiscoverFragment;
 import www.ht.com.app.ui.fragment.FindTeacherFragment;
@@ -84,6 +84,7 @@ public class MainActivity extends BaseActivity {
                     case R.id.myInfo:
                         break;
                     case R.id.myTeacher:
+                        callMe(TeacherActivity.class);
                         break;
                     case R.id.myCondition:
                         break;

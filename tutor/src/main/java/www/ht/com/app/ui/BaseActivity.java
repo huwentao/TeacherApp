@@ -1,4 +1,4 @@
-package www.ht.com.app.base;
+package www.ht.com.app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

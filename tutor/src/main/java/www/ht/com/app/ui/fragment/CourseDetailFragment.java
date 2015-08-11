@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseFragment;
+import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.data.Course;
 import www.ht.com.app.data.CourseFile;
 import www.ht.com.app.ui.fragment.adapter.CourseRecylerAdapter;

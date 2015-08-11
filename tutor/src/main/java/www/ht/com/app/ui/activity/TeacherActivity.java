@@ -1,28 +1,42 @@
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.orhanobut.logger.Logger;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.tools.SnackBarUtils;
 
-public class AdviceActivity extends BaseActivity {
-    @Bind(R.id.toolbar) Toolbar toolbar;
+public class TeacherActivity extends BaseActivity {
 
+    @Bind(R.id.floatActionButton) FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advice);
-        setToolBar(toolbar);
+        setContentView(R.layout.activity_teacher);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SnackBarUtils.makeSnackBar(v, "提示一下", "点我", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Logger.d("snackbar click......");
+                    }
+                }).show();
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_advice, menu);
+        getMenuInflater().inflate(R.menu.menu_teacher, menu);
         return true;
     }
 

@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseActivity;
+import www.ht.com.app.ui.BaseActivity;
 
 public class AboutActivity extends BaseActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;

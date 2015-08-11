@@ -59,4 +59,5 @@
     <string name="cusServiceInfo">Copyright ©2015 开心教育版权所有\n湖南开心教育科技有限公司</string>
     <string name="appNameDesc">开心家教客户端</string>
     <string name="appVersionDesc">版本：1.0.0</string>
+    <string name="title_activity_teacher">TeacherActivity</string>
 </resources>

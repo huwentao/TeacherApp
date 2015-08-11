@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import www.ht.com.app.R;
-import www.ht.com.app.base.BaseFragment;
+import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.adapter.ReviewRecyclerAdapter;
 
 /**
