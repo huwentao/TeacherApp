@@ -19,4 +19,10 @@ public class LoginActivity extends BaseActivity {
         callMe(MainActivity.class);
         finish();
     }
+
+    @OnClick(R.id.skip)
+    public void skip() {
+        callMe(MainActivity.class);
+        finish();
+    }
 }
