@@ -15,12 +15,12 @@
 
     <string name="hello_world">Hello world!</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">展开</string>
     <string name="drawer_close">关闭</string>
     <string name="icon_find_text">找老师</string>
-    <string name="icon_review_text">评论圈</string>
+    <string name="icon_review_text">推荐</string>
     <string name="icon_course_text">课程</string>
     <string name="icon_discover_text">发现</string>
     <string name="courseWeekType">本周课程</string>
@@ -53,11 +53,19 @@
     <string name="title_activity_about">关于我们</string>
     <string name="title_activity_advice">意见反馈</string>
     <string name="adviceTitle">开心家教用户体验反馈QQ群：666888</string>
-    <string name="adviceHint">有什么问题，心情的吐槽吧！</string>
+    <string name="adviceHint">有什么问题，尽情的吐槽吧！</string>
     <string name="adviceUserHint">手机/QQ/邮箱</string>
     <string name="send">发送</string>
-    <string name="cusServiceInfo">Copyright ©2015 开心教育版权所有\n湖南开心教育科技有限公司</string>
+    <string name="cusServiceInfo">Copyright ©2015 开心教育版权所有</string>
     <string name="appNameDesc">开心家教客户端</string>
     <string name="appVersionDesc">版本：1.0.0</string>
     <string name="title_activity_teacher">TeacherActivity</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="skip">跳过</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="loginInputLoginId">登录账号</string>
+    <string name="loginInputPasswd">账号密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="companyName">湖南开心教育科技有限公司</string>
 </resources>

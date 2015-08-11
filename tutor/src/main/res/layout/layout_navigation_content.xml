@@ -40,7 +40,7 @@
     </android.support.design.widget.CoordinatorLayout>
 
 
-    <www.ht.com.app.view.TabViewLayout
+    <www.ht.com.app.view.tabview.TabViewLayout
         android:id="@+id/tabViewLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tabview_layout_height"/>

@@ -23,7 +23,7 @@ import www.ht.com.app.ui.fragment.CourseFragment;
 import www.ht.com.app.ui.fragment.DiscoverFragment;
 import www.ht.com.app.ui.fragment.FindTeacherFragment;
 import www.ht.com.app.ui.fragment.ReviewFragment;
-import www.ht.com.app.view.TabViewLayout;
+import www.ht.com.app.view.tabview.TabViewLayout;
 
 public class MainActivity extends BaseActivity {
 
