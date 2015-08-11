@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 
@@ -28,6 +29,8 @@ public class TutorApplication extends Application {
         dbUtils = DbUtils.create(this);
 
         registerActivityLifecycleCallbacks(new HTActivityLifecycleCallbacks());
+
+        SDKInitializer.initialize(getApplicationContext());//因此我们建议该方法放在Application的初始化方法中
     }
 
     public DbUtils getDbUtils() {

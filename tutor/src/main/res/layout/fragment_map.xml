@@ -4,11 +4,10 @@
              android:layout_height="match_parent"
              tools:context="www.ht.com.app.ui.fragment.MapFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="功能即将开放，敬请期待!"
-        android:gravity="center"/>
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
 
 </FrameLayout>
