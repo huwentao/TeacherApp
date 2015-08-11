@@ -1,8 +1,6 @@
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import butterknife.OnClick;
 import www.ht.com.app.R;

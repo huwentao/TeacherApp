@@ -1,11 +1,8 @@
 package www.ht.com.app.ui.activity;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import butterknife.OnClick;
 import www.ht.com.app.R;
