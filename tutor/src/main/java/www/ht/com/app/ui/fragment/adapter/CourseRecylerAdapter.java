@@ -88,7 +88,7 @@ public class CourseRecylerAdapter extends RecyclerView.Adapter<CourseRecylerAdap
         return mCourseList.size();
     }
 
-    public class CourseView extends RecyclerView.ViewHolder {
+    public static class CourseView extends RecyclerView.ViewHolder {
         @Bind(R.id.courseDay) TextView courseDay;
         @Bind(R.id.studentName) TextView studentName;
         @Bind(R.id.courseTitle) TextView courseTitle;

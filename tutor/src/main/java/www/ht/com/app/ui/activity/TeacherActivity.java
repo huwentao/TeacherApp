@@ -1,7 +1,12 @@
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,14 +17,22 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.tools.SnackBarUtils;
+import www.ht.com.app.ui.fragment.adapter.TeacherInfoPagerAdapter;
 
 public class TeacherActivity extends BaseActivity {
 
     @Bind(R.id.floatActionButton) FloatingActionButton floatingActionButton;
+    @Bind(R.id.toolbar) Toolbar toolbar;
+    @Bind(R.id.viewPager) ViewPager viewPager;
+    @Bind(R.id.tabViewLayout) TabLayout tabViewLayout;
+    @Bind(R.id.collapsingToolbar) CollapsingToolbarLayout collapsingToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
+        setToolBar(toolbar);
+
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +44,23 @@ public class TeacherActivity extends BaseActivity {
                 }).show();
             }
         });
+
+        TeacherInfoPagerAdapter teacherInfoPagerAdapter = new TeacherInfoPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(teacherInfoPagerAdapter);
+        tabViewLayout.setupWithViewPager(viewPager);
+
+    }
+
+    /**
+     * 初始化Toolbar的初始配置
+     */
+    protected void initToolBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            collapsingToolbar.setTitle(getTitle());
+        }
     }
 
     @Override

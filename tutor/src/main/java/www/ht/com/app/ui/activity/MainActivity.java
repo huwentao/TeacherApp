@@ -96,7 +96,6 @@ public class MainActivity extends BaseActivity {
                     default:
                         return false;
                 }
-                mDrawerLayout.closeDrawers();
                 return true;
             }
         });

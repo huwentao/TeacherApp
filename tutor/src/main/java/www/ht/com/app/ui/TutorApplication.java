@@ -35,7 +35,6 @@ public class TutorApplication extends Application {
     }
 
 
-
     /**
      *
      */
@@ -72,7 +71,7 @@ public class TutorApplication extends Application {
 
         @Override
         public void onActivityDestroyed(Activity activity) {
-            Logger.d(activity.getTitle().toString()+"onDestoryed");
+            Logger.d(activity.getTitle().toString() + "(" + ((BaseActivity) activity).getName() + ") onDestoryed");
         }
     }
 

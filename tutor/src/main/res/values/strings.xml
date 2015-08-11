@@ -46,7 +46,7 @@
     <string name="findTeacher">找老师</string>
     <string name="action_message">消息</string>
     <string name="title_activity_setting">设置</string>
-    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_message">消息</string>
     <string name="settingAbout">关于我们</string>
     <string name="settingVersion">检查版本</string>
     <string name="settingAdvice">意见反馈</string>
@@ -59,10 +59,10 @@
     <string name="cusServiceInfo">Copyright ©2015 开心教育版权所有</string>
     <string name="appNameDesc">开心家教客户端</string>
     <string name="appVersionDesc">版本：1.0.0</string>
-    <string name="title_activity_teacher">TeacherActivity</string>
-    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_teacher">老师信息</string>
+    <string name="title_activity_loading">开心家教</string>
     <string name="skip">跳过</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">登录</string>
     <string name="loginInputLoginId">登录账号</string>
     <string name="loginInputPasswd">账号密码</string>
     <string name="login">登录</string>

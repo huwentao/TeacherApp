@@ -8,19 +8,19 @@ import android.view.ViewGroup;
 import www.ht.com.app.R;
 
 /**
- * Created by mokey on 2015/8/7.
+ * Created by monkey on 2015/8/11.
  */
-public class ReviewRecyclerAdapter extends RecyclerView.Adapter<ReviewRecyclerAdapter.CourseView> {
+public class TeacherInfoRecyclerAdapter extends RecyclerView.Adapter<TeacherInfoRecyclerAdapter.TeacherInfoView> {
 
     @Override
-    public CourseView onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TeacherInfoView onCreateViewHolder(ViewGroup parent, int viewType) {
         View courseView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.layout_review_view, parent, false);
-        return new CourseView(courseView);
+        return new TeacherInfoView(courseView);
     }
 
     @Override
-    public void onBindViewHolder(CourseView holder, int position) {
+    public void onBindViewHolder(TeacherInfoView holder, int position) {
 
     }
 
@@ -29,9 +29,9 @@ public class ReviewRecyclerAdapter extends RecyclerView.Adapter<ReviewRecyclerAd
         return 10;
     }
 
-    public static class CourseView extends RecyclerView.ViewHolder {
+    public static class TeacherInfoView extends RecyclerView.ViewHolder {
 
-        public CourseView(View itemView) {
+        public TeacherInfoView(View itemView) {
             super(itemView);
         }
     }
