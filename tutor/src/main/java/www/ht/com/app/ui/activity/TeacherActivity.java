@@ -6,10 +6,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.orhanobut.logger.Logger;
 
@@ -17,14 +20,14 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.tools.SnackBarUtils;
+import www.ht.com.app.ui.activity.adapter.TeacherRecyclerAdapter;
 import www.ht.com.app.ui.fragment.adapter.TeacherInfoPagerAdapter;
 
 public class TeacherActivity extends BaseActivity {
 
     @Bind(R.id.floatActionButton) FloatingActionButton floatingActionButton;
     @Bind(R.id.toolbar) Toolbar toolbar;
-    @Bind(R.id.viewPager) ViewPager viewPager;
-    @Bind(R.id.tabViewLayout) TabLayout tabViewLayout;
+    @Bind(R.id.recyclerView) RecyclerView recyclerView;
     @Bind(R.id.collapsingToolbar) CollapsingToolbarLayout collapsingToolbar;
 
     @Override
@@ -45,9 +48,12 @@ public class TeacherActivity extends BaseActivity {
             }
         });
 
-        TeacherInfoPagerAdapter teacherInfoPagerAdapter = new TeacherInfoPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(teacherInfoPagerAdapter);
-        tabViewLayout.setupWithViewPager(viewPager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        TeacherRecyclerAdapter teacherRecyclerAdapter = new TeacherRecyclerAdapter();
+        recyclerView.setAdapter(teacherRecyclerAdapter);
 
     }
 
