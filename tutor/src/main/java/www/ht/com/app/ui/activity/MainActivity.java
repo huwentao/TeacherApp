@@ -2,6 +2,8 @@ package www.ht.com.app.ui.activity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,29 +13,33 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
+import www.ht.com.app.tools.AppHandler;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.CourseFragment;
 import www.ht.com.app.ui.fragment.DiscoverFragment;
 import www.ht.com.app.ui.fragment.FindTeacherFragment;
+import www.ht.com.app.ui.fragment.PersonFragment;
 import www.ht.com.app.ui.fragment.ReviewFragment;
 import www.ht.com.app.view.tabview.TabViewLayout;
 
 public class MainActivity extends BaseActivity {
 
+    private static final int NAVIGATION_ITEMS_ELECTED = 10;
     /**
      * Used to store the last screen title. For use in {@link #initToolBar()} ()}.
      */
 
-    @Bind(R.id.drawer_layout) DrawerLayout mDrawerLayout;
-    @Bind(R.id.navigationView) NavigationView navigationView;
-    @Bind(R.id.toolbar) Toolbar toolbar;
+//    @Bind(R.id.drawer_layout) DrawerLayout mDrawerLayout;
+//    @Bind(R.id.navigationView) NavigationView navigationView;
+
     @Bind(R.id.tabViewLayout) TabViewLayout tabViewLayout;
 
     private ActionBarDrawerToggle mDrawerToggle;
@@ -44,14 +50,14 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setToolBar(toolbar);
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open,
+        setContentView(R.layout.layout_navigation_content);
+        setIsOpenFlingClose(false);
+        /*mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open,
                 R.string.drawer_close);
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        setupDrawerContent(navigationView);
+        setupDrawerContent(navigationView);*/
 
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -59,10 +65,12 @@ public class MainActivity extends BaseActivity {
         fragments.add(new ReviewFragment());
         fragments.add(new CourseFragment());
         fragments.add(new DiscoverFragment());
+        fragments.add(new PersonFragment());
         transaction.add(R.id.container, fragments.get(0), fragments.get(0).getName());
         transaction.add(R.id.container, fragments.get(1), fragments.get(1).getName());
         transaction.add(R.id.container, fragments.get(2), fragments.get(2).getName());
         transaction.add(R.id.container, fragments.get(3), fragments.get(3).getName());
+        transaction.add(R.id.container, fragments.get(4), fragments.get(4).getName());
         for (int i = 0; i < fragments.size(); i++) {
             if (i != showIndex)
                 transaction.hide(fragments.get(i));
@@ -76,47 +84,23 @@ public class MainActivity extends BaseActivity {
             }
         });
         tabViewLayout.checkIndex(showIndex);
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.myInfo:
-                        break;
-                    case R.id.myTeacher:
-                        callMe(TeacherActivity.class);
-                        break;
-                    case R.id.myCondition:
-                        break;
-                    case R.id.myCourseware:
-                        break;
-                    case R.id.setting:
-                        callMe(SettingActivity.class);
-                        break;
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
     }
 
     @Override
-    protected void initToolBar() {
+    public void initToolBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(true);
-            actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle("");
             if (Build.VERSION.SDK_INT > 21) {
-                actionBar.setLogo(getDrawable(R.drawable.logo));
+                actionBar.setLogo(getDrawable(R.drawable.logo_2));
             } else {
-                actionBar.setLogo(getResources().getDrawable(R.drawable.logo));
+                actionBar.setLogo(getResources().getDrawable(R.drawable.logo_2));
             }
         }
     }
 
-    private void setupDrawerContent(NavigationView navigationView) {
+  /*  private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -126,7 +110,7 @@ public class MainActivity extends BaseActivity {
                         return true;
                     }
                 });
-    }
+    }*/
 
     /**
      * 切换fragment

@@ -35,7 +35,7 @@ public class FindPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return position*100;
     }
 
     @Override

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lineBackground"
+        style="@style/line_h_background"/>
+
+    <TextView
+        android:id="@+id/lastestCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineBackground"
+        android:padding="12dp"
+        android:text="热门老师"/>
+
+    <TextView
+        style="@style/line_h"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/test_mm"
+            app:siBorderColor="@color/white"
+            app:siBorderWidth="1dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/courseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/userPhoto"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teacherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="12dp"
+                android:text="李老师"/>
+
+            <TextView
+                android:id="@+id/courseContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="三看分析法妙解考研英语难句分析"/>
+
+            <TextView
+                android:id="@+id/courseTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="2015-08-12 20:12"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/line_h"
+        android:layout_marginLeft="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/userPhoto2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/test_mm"
+            app:siBorderColor="@color/white"
+            app:siBorderWidth="1dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/courseInfo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/userPhoto2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teacherName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="12dp"
+                android:text="李老师"/>
+
+            <TextView
+                android:id="@+id/courseContent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="三看分析法妙解考研英语难句分析"/>
+
+            <TextView
+                android:id="@+id/courseTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="2015-08-12 20:12"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/line_h"
+        android:layout_marginLeft="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/userPhoto3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/test_mm"
+            app:siBorderColor="@color/white"
+            app:siBorderWidth="1dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/courseInfo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/userPhoto3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teacherName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="12dp"
+                android:text="李老师"/>
+
+            <TextView
+                android:id="@+id/courseContent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="三看分析法妙解考研英语难句分析"/>
+
+            <TextView
+                android:id="@+id/courseTime3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="2015-08-12 20:12"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseInfo"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="更多课程"/>
+</LinearLayout>

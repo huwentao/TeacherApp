@@ -3,25 +3,48 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/colorPrimary">
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center|top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_userbg"
+        />
 
     <com.github.siyamed.shapeimageview.CircularImageView
         android:id="@+id/userPhoto"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:src="@drawable/test_mm"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="45dp"
-        app:siBorderWidth="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/test_user_photo"
+        app:siBorderColor="@color/white"
+        app:siBorderWidth="2dp"
         />
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_gravity="bottom"
+        android:layout_height="48dp"
+        android:layout_marginTop="152dp"
         android:gravity="center|top"
+        android:padding="16dp"
         android:text="游客"
         android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/userDesc"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="200dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:padding="16dp"
+        android:text="说点什么吧..."
+        android:textColor="@color/textColorLight"
+        android:visibility="gone"/>
 </FrameLayout>

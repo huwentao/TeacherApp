@@ -27,7 +27,7 @@ public class CourseDetailFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_COURSE_TYPE = "COURSE_TYPE";
-    private static final String ARG_TITLE = "TITLE";
+    private static final String ARG_TITLE = "ARG_TITLE";
     public static final String WEEK_TYPE = "week_type";
     public static final String MONTH_TYPE = "month_type";
     // TODO: Rename and change types of parameters

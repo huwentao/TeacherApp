@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="16dp"
+              android:layout_marginTop="16dp"
+              android:orientation="horizontal">
+
+    <android.widget.Space
+        android:layout_width="24dp"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/parentAsk"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:background="@drawable/sel_button_yellow_radius"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/findDetailTitle"
+        android:textColor="@color/textColorWhite"
+        android:textSize="16sp"/>
+
+    <android.widget.Space
+        android:layout_width="24dp"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/nearTeacher"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:background="@drawable/sel_button_green_radius"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/findMapNearbyTitle"
+        android:textColor="@color/textColorWhite"
+        android:textSize="16sp"/>
+
+    <android.widget.Space
+        android:layout_width="24dp"
+        android:layout_height="10dp"/>
+</LinearLayout>

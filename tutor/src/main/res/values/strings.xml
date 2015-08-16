@@ -68,4 +68,17 @@
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="companyName">湖南开心教育科技有限公司</string>
+    <string name="title_activity_parent">我的信息</string>
+    <string name="title_activity_my_courseFiles">我的课件</string>
+    <string name="title_activity_my_teacher">我的老师</string>
+    <string name="title_activity_my_course_need">我的需求</string>
+    <string name="title_activity_add_new_course">新增课程</string>
+    <string name="title_activity_register">注册</string>
+    <string name="userName">您的名字</string>
+    <string name="userPhoneNum">手机号</string>
+    <string name="userAgent">性别</string>
+    <string name="commit">提交</string>
+    <string name="icon_person_text">我的</string>
+    <string name="title_activity_parent_ask">家长要求</string>
+    <string name="title_activity_near_teacher">附近老师</string>
 </resources>

@@ -3,6 +3,13 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
+    <TextView
+        style="@style/line_h_background"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="课程评价"/>
 
     <TextView
         style="@style/line_h"/>
@@ -10,7 +17,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -125,14 +133,14 @@
     </LinearLayout>
 
     <TextView
-        style="@style/line_h"
-        android:layout_marginTop="8dp"/>
+        style="@style/line_h_background"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/allText"
@@ -218,29 +226,10 @@
             />
     </RelativeLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="全部评价"/>
-
-        <ImageView
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/icon_more_down"/>
-    </LinearLayout>
-
-    <include
-        layout="@layout/layout_shadow_down"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"/>
+        android:padding="16dp"
+        android:text="全部评价"/>
 </LinearLayout>

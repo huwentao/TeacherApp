@@ -18,7 +18,8 @@ import www.ht.com.app.R;
  */
 public class TabViewLayout extends LinearLayout {
 
-    @Bind({R.id.tabView_1, R.id.tabView_2, R.id.tabView_3, R.id.tabView_4}) List<TabView> mTabViews;
+    @Bind({R.id.tabView_1, R.id.tabView_2, R.id.tabView_3, R.id.tabView_4, R.id.tabView_5})
+    List<TabView> mTabViews;
     @Bind(R.id.tabViewLayout) LinearLayout tabViewLayout;
 
     private int checkedIndex = 0;
@@ -36,6 +37,7 @@ public class TabViewLayout extends LinearLayout {
         mTabViews.get(1).init(context.getResources().getString(R.string.icon_review_text));
         mTabViews.get(2).init(context.getResources().getString(R.string.icon_course_text));
         mTabViews.get(3).init(context.getResources().getString(R.string.icon_discover_text));
+        mTabViews.get(4).init(context.getResources().getString(R.string.icon_person_text));
         checkIndex(0);
     }
 
@@ -44,7 +46,7 @@ public class TabViewLayout extends LinearLayout {
     }
 
     @NonNull
-    @OnClick({R.id.tabView_1, R.id.tabView_2, R.id.tabView_3, R.id.tabView_4})
+    @OnClick({R.id.tabView_1, R.id.tabView_2, R.id.tabView_3, R.id.tabView_4, R.id.tabView_5})
     public void onClick(TabView view) {
         int index = check(view);
         if (mOnTabViewChangeListener != null) {

@@ -25,7 +25,7 @@ import www.ht.com.app.ui.fragment.adapter.TeacherInfoPagerAdapter;
 
 public class TeacherActivity extends BaseActivity {
 
-    @Bind(R.id.floatActionButton) FloatingActionButton floatingActionButton;
+//    @Bind(R.id.floatActionButton) FloatingActionButton floatingActionButton;
     @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.recyclerView) RecyclerView recyclerView;
     @Bind(R.id.collapsingToolbar) CollapsingToolbarLayout collapsingToolbar;
@@ -36,17 +36,17 @@ public class TeacherActivity extends BaseActivity {
         setContentView(R.layout.activity_teacher);
         setToolBar(toolbar);
 
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SnackBarUtils.makeSnackBar(v, "提示一下", "点我", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Logger.d("snackbar click......");
-                    }
-                }).show();
-            }
-        });
+//        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                SnackBarUtils.makeSnackBar(v, "提示一下", "点我", new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Logger.d("snackbar click......");
+//                    }
+//                }).show();
+//            }
+//        });
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -60,12 +60,12 @@ public class TeacherActivity extends BaseActivity {
     /**
      * 初始化Toolbar的初始配置
      */
-    protected void initToolBar() {
+    public void initToolBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(true);
             actionBar.setDisplayHomeAsUpEnabled(true);
-            collapsingToolbar.setTitle(getTitle());
+            collapsingToolbar.setTitle("李老师");
         }
     }
 

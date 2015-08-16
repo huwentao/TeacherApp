@@ -5,13 +5,18 @@ import android.app.Fragment;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.adapter.FindPagerAdapter;
+import www.ht.com.app.ui.fragment.adapter.FindRecyclerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,21 +37,23 @@ public class FindTeacherFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find_teacher, container, false);
-        tabViewLayout = (TabLayout) view.findViewById(R.id.findTabViewLayout);
-        viewPager = (ViewPager) view.findViewById(R.id.findViewPager);
         return view;
     }
 
-    TabLayout tabViewLayout;
-    ViewPager viewPager;
-
+    @Bind(R.id.recyclerView)RecyclerView recyclerView;
+    @Bind(R.id.toolbar) Toolbar toolbar;
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        FindPagerAdapter findPagerAdapter = new FindPagerAdapter((AppCompatActivity) getActivity());
-        viewPager.setAdapter(findPagerAdapter);
-        tabViewLayout.setupWithViewPager(viewPager);
+        getBaseActivity().setSupportActionBar(toolbar);
+        getBaseActivity().initToolBar();
 
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getBaseActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        FindRecyclerAdapter recyclerAdapter = new FindRecyclerAdapter();
+        recyclerView.setAdapter(recyclerAdapter);
     }
 
 

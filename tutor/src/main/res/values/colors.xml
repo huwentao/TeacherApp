@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="windowBackgroundDark">#EEEEEE</color>
+    <color name="windowBackground">#FAFAFA</color>
+    <color name="windowBackgroundLight">#EEEEEE</color>
+    <color name="windowBackgroundDark">#E0E0E0</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="transparentHalf">#55FFFFFF</color>
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#388e3c</color>
     <color name="colorPrimaryLight">#66bb6a</color>
@@ -13,7 +15,7 @@
     <color name="textColorPrimary">#424242</color>
 
     <color name="navColor">#ECEFF1</color>
-    <color name="lineColor">#ECEFF1</color>
+    <color name="lineColor">#E0E0E0</color>
 
     <color name="textColorBlack">#212121</color>
     <color name="textColorLight">#616161</color>
@@ -28,6 +30,14 @@
     <color name="buttonYellowPress">#ffa726</color>
     <color name="buttonTrans">#50424242</color>
     <color name="buttonTransPress">#80424242</color>
+
+    <color name="shapeOrange">#FF9800</color>
+    <color name="shapeBlue">#0F0FFF</color>
+    <color name="shapePurple">#6600FF</color>
+    <color name="shapeRed">#FF0000</color>
+
+    <color name="buttonWhite">#FAFAFA</color>
+    <color name="buttonWhitePress">#F5F5F5</color>
 
     <color name="background_gradient_start">#000000</color>
     <color name="background_gradient_end">#DDDDDD</color>

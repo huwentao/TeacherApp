@@ -1,6 +1,7 @@
 package www.ht.com.app.ui;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -16,6 +17,13 @@ public class BaseFragment extends Fragment {
 
     private String mName = UUID.randomUUID().toString();
     private String mTitle = "";
+    private BaseActivity baseActivity;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        baseActivity = (BaseActivity) activity;
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -31,6 +39,7 @@ public class BaseFragment extends Fragment {
 
     /**
      * 取到Fragment Name
+     *
      * @return
      */
     public String getName() {
@@ -39,6 +48,7 @@ public class BaseFragment extends Fragment {
 
     /**
      * 设置Fragment标题
+     *
      * @return
      */
     public String getTitle() {
@@ -47,9 +57,14 @@ public class BaseFragment extends Fragment {
 
     /**
      * 取到Fragment标题
+     *
      * @param title
      */
     public void setTitle(String title) {
         mTitle = title;
+    }
+
+    public BaseActivity getBaseActivity() {
+        return baseActivity;
     }
 }

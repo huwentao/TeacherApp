@@ -39,8 +39,8 @@
         android:layout_below="@+id/lineup"
         android:layout_toRightOf="@id/courseDay"/>
 
-    <include
-        layout="@layout/layout_shadow_down"
+    <TextView
+        style="@style/line_h_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/courseContent"/>

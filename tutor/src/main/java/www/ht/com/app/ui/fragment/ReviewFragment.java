@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.adapter.ReviewRecyclerAdapter;
@@ -24,7 +26,7 @@ public class ReviewFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
 
     }
-
+    @Bind(R.id.toolbar) Toolbar toolbar;
     RecyclerView recyclerView;
 
     @Override
@@ -39,6 +41,9 @@ public class ReviewFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getBaseActivity().setSupportActionBar(toolbar);
+        getBaseActivity().initToolBar();
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setHasFixedSize(true);

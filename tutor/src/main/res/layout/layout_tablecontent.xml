@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layoutTableContent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/line1"
+        style="@style/line_h"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearnup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <TextView style="@style/line_v"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="学生年龄"
+            android:padding="6dp"
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="8~12岁"
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="教龄"
+            android:padding="6dp"
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1~3年"
+            android:padding="6dp"
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line2"
+        style="@style/line_h"
+        android:layout_below="@+id/linearnup"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>/>
+
+    <LinearLayout
+        android:id="@+id/linedown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView style="@style/line_v"/>
+
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="位置"
+            android:padding="6dp"
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="长沙市天心区"
+            
+            android:textColor="@color/textColorLight"
+            android:textSize="14sp"/>
+
+        <TextView style="@style/line_v"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/line_h"
+        android:layout_below="@+id/linedown"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+</RelativeLayout>

@@ -5,21 +5,29 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import butterknife.ButterKnife;
+import www.ht.com.app.tools.DisplayUtil;
 
 public class BaseActivity extends AppCompatActivity {
+    private GestureDetector gestureDetector = null;
+    private boolean isOpenFlingClose = true;
+    private float flingWidthPX = 0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        flingWidthPX = DisplayUtil.dip2px(this, 100);
     }
 
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
+        gestureDetector = new GestureDetector(this, onGestureListener);
     }
 
     public CharSequence getName() {
@@ -51,7 +59,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 初始化Toolbar的初始配置
      */
-    protected void initToolBar() {
+    public void initToolBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(true);
@@ -67,5 +75,28 @@ public class BaseActivity extends AppCompatActivity {
             this.finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    private GestureDetector.SimpleOnGestureListener onGestureListener = new GestureDetector.SimpleOnGestureListener() {
+        private float startFlingX = 0f;
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            startFlingX = e1.getX();
+            if (isOpenFlingClose && velocityX - startFlingX > flingWidthPX) {
+                finish();
+            }
+            return super.onFling(e1, e2, velocityX, velocityY);
+        }
+    };
+
+    public void setIsOpenFlingClose(boolean isOpenFlingClose) {
+        this.isOpenFlingClose = isOpenFlingClose;
     }
 }

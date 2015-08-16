@@ -52,4 +52,14 @@
         app:TabImageColorPress="@color/tabImageBackgroundPress"
         app:TabImageSrc="@drawable/icon_discover"
         app:TabImageTargetWidth="22dp"/>
+    <www.ht.com.app.view.tabview.TabView
+        android:id="@+id/tabView_5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        app:TabImageColor="@color/tabImageBackground"
+        app:TabImageColorPress="@color/tabImageBackgroundPress"
+        app:TabImageSrc="@drawable/icon_person"
+        app:TabImageTargetWidth="22dp"/>
 </LinearLayout>
