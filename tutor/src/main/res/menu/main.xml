@@ -1,9 +1,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/message"
-        android:icon="@drawable/ic_action_messge"
+        android:id="@+id/courseMenu"
+        android:icon="@drawable/ic_action_rili"
         android:title="@string/action_message"
-        android:orderInCategory="1"
+        app:showAsAction="always">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/weekCourses"
+                    android:orderInCategory="1"
+                    android:title="@string/action_message_week"
+                    />
+                <item
+                    android:id="@+id/monthCourses"
+                    android:orderInCategory="2"
+                    android:title="@string/action_message_month"/>
+            </group>
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/messageMenu"
+        android:icon="@drawable/ic_action_message"
+        android:title="@string/action_message"
         app:showAsAction="always"/>
 </menu>

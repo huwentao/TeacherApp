@@ -2,25 +2,18 @@ package www.ht.com.app.ui.activity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.tools.AppHandler;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.fragment.CourseFragment;
@@ -46,6 +39,8 @@ public class MainActivity extends BaseActivity {
     private List<BaseFragment> fragments = new ArrayList<>();
     private FragmentManager fragmentManager;
     private int showIndex = 0; //初始化显示的fragment位置
+    private List<MenuItem> courseMenus = new ArrayList<>();
+    private Menu mMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +58,7 @@ public class MainActivity extends BaseActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         fragments.add(new FindTeacherFragment());
         fragments.add(new ReviewFragment());
-        fragments.add(new CourseFragment());
+        fragments.add(CourseFragment.newInstance(CourseFragment.WEEK_TYPE));
         fragments.add(new DiscoverFragment());
         fragments.add(new PersonFragment());
         transaction.add(R.id.container, fragments.get(0), fragments.get(0).getName());
@@ -81,6 +76,9 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onChange(int index) {
                 showFragment(index);
+                if (courseMenus.size() > index && index != 2) {
+                    courseMenus.get(index).setVisible(false);
+                }
             }
         });
         tabViewLayout.checkIndex(showIndex);
@@ -136,6 +134,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+        mMenu = menu;
+        courseMenus.add(menu.findItem(R.id.courseMenu));
         return true;
     }
 
@@ -145,7 +145,7 @@ public class MainActivity extends BaseActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.message) {
+        if (id == R.id.messageMenu) {
             callMe(MessageActivity.class);
         }
 

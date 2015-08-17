@@ -26,7 +26,7 @@ public class LoginActivity extends BaseActivity {
                 break;
             case R.id.register:
                 callMe(RegisterActivity.class);
-                finish();
+//                finish();
                 break;
         }
 

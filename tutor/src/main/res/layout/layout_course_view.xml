@@ -40,6 +40,7 @@
         android:layout_toRightOf="@id/courseDay"/>
 
     <TextView
+        android:id="@+id/shadowDown"
         style="@style/line_h_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

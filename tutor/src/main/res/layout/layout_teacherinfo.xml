@@ -25,9 +25,9 @@
             android:layout_height="56dp"
             android:background="@drawable/shape_borde_teacher_circle_o"
             android:gravity="center"
+            android:text="283"
             android:textColor="@color/shapeOrange"
-            android:textSize="18sp"
-            android:text="283"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -49,8 +49,8 @@
             android:background="@drawable/shape_borde_teacher_circle_b"
             android:gravity="center"
             android:text="300"
-            android:textSize="18sp"
-            android:textColor="@color/shapeBlue"/>
+            android:textColor="@color/shapeBlue"
+            android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -93,12 +93,12 @@
                 android:textSize="14dp"/>
 
             <ImageView
-                android:layout_width="12dp"
+                android:layout_width="18dp"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/ratingScore"
                 android:layout_toEndOf="@+id/ratingNums"
                 android:scaleType="centerInside"
-                android:src="@drawable/icon_good"/>
+                android:src="@drawable/ic_action_good"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -114,8 +114,8 @@
             android:background="@drawable/shape_borde_teacher_circle_r"
             android:gravity="center"
             android:text="43"
-            android:textSize="18sp"
-            android:textColor="@color/shapeRed"/>
+            android:textColor="@color/shapeRed"
+            android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"

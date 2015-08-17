@@ -38,6 +38,8 @@
 
     <color name="buttonWhite">#FAFAFA</color>
     <color name="buttonWhitePress">#F5F5F5</color>
+    <color name="actionbarIcon">#6C7A81</color>
+
 
     <color name="background_gradient_start">#000000</color>
     <color name="background_gradient_end">#DDDDDD</color>
