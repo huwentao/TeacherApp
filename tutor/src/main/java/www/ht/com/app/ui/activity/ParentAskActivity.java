@@ -2,18 +2,15 @@ package www.ht.com.app.ui.activity;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.fragment.FindDetailFragment;
-import www.ht.com.app.ui.fragment.PersonFragment;
 
 public class ParentAskActivity extends BaseActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;

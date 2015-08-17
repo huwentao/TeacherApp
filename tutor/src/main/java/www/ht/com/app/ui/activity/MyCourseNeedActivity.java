@@ -1,6 +1,5 @@
 package www.ht.com.app.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +11,6 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.activity.adapter.CourseNeedRecyclerAdapter;
-import www.ht.com.app.ui.activity.adapter.MyTeacherRecyclerAdapter;
 
 public class MyCourseNeedActivity extends BaseActivity {
     @Bind(R.id.recyclerView) RecyclerView recyclerView;

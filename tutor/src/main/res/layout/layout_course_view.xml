@@ -4,26 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/windowBackground">
-
-    <ImageView
-        android:id="@+id/shadowLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/icon_shadow_down"/>
-
     <TextView
-        android:id="@+id/lineup"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_below="@+id/shadowLine"
-        android:background="@color/textColorHint"/>
+        android:id="@+id/shadowLine"
+        style="@style/line_h"
+        android:layout_marginBottom="12dp"/>
 
     <TextView
         android:id="@+id/courseDay"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:layout_below="@+id/lineup"
+        android:layout_below="@+id/shadowLine"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
@@ -36,13 +26,13 @@
         layout="@layout/layout_coursefiles_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lineup"
-        android:layout_toRightOf="@id/courseDay"/>
+        android:layout_below="@+id/shadowLine"
+        android:layout_toRightOf="@id/courseDay"
+        />
 
     <TextView
         android:id="@+id/shadowDown"
-        style="@style/line_h_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        style="@style/line_h"
         android:layout_below="@+id/courseContent"/>
 </RelativeLayout>

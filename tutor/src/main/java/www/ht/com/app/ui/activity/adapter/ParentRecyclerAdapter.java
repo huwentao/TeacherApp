@@ -27,7 +27,7 @@ public class ParentRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 break;
             case PARENT_LAST:
                 View historyView = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.layout_parentlast_info, parent, false);
+                        .inflate(R.layout.layout_parent_last_info, parent, false);
                 viewHolder = new ParentLast(historyView);
                 break;
             case LAST_COURSE:

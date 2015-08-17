@@ -2,9 +2,6 @@ package www.ht.com.app.ui.fragment;
 
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -15,7 +12,6 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
-import www.ht.com.app.ui.fragment.adapter.FindPagerAdapter;
 import www.ht.com.app.ui.fragment.adapter.FindRecyclerAdapter;
 
 /**

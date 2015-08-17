@@ -96,10 +96,9 @@ public class CourseRecylerAdapter extends RecyclerView.Adapter<CourseRecylerAdap
         @Bind(R.id.fileDesc) TextView fileDesc;
         @Bind(R.id.courseTime) TextView courseTime;
         @Bind(R.id.lineContent) TextView lineContent;
-        @Bind(R.id.lineup) TextView lineup;
         @Bind(R.id.fileImage) ImageView fileImage;
-        @Bind(R.id.shadowLine) ImageView shadowLine;
-        @Bind(R.id.shadowDown) ImageView shadowDown;
+        @Bind(R.id.shadowLine) TextView shadowLine;
+        @Bind(R.id.shadowDown) TextView shadowDown;
 
         public CourseView(View itemView) {
             super(itemView);
@@ -143,7 +142,6 @@ public class CourseRecylerAdapter extends RecyclerView.Adapter<CourseRecylerAdap
     public void isFirst(CourseView courseView) {
         courseView.courseDay.setVisibility(View.VISIBLE);
         courseView.lineContent.setVisibility(View.GONE);
-        courseView.lineup.setVisibility(View.VISIBLE);
         courseView.shadowLine.setVisibility(View.GONE);
         courseView.shadowDown.setVisibility(View.GONE);
     }
@@ -151,7 +149,6 @@ public class CourseRecylerAdapter extends RecyclerView.Adapter<CourseRecylerAdap
     public void isCenter(CourseView courseView) {
         courseView.courseDay.setVisibility(View.INVISIBLE);
         courseView.lineContent.setVisibility(View.VISIBLE);
-        courseView.lineup.setVisibility(View.GONE);
         courseView.shadowLine.setVisibility(View.GONE);
         courseView.shadowDown.setVisibility(View.GONE);
     }

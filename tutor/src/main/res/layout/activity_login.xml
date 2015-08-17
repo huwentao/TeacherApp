@@ -5,92 +5,95 @@
                 android:layout_height="match_parent"
                 tools:context="www.ht.com.app.ui.activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="87dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:background="@color/colorPrimary"
-        android:scaleType="centerInside"
-        android:src="@drawable/logo_2"/>
-
-    <www.ht.com.app.view.segmentcontrol.SegmentControl
-        android:id="@+id/segmentControl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        android:textSize="14sp"
-        app:colors="@color/colorPrimary"
-        app:cornerRadius="5dp"
-        app:direction="horizon"
-        app:horizonGap="16dp"
-        app:texts="我是家长|我是老师"
-        app:verticalGap="8dp"/>
+    <include
+        layout="@layout/toolbar"/>
 
     <LinearLayout
-        android:id="@+id/loginLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/segmentControl"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <android.support.design.widget.TextInputLayout
+        <android.widget.Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="3"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/loginInputLoginId"
-                android:textColorHint="@color/textColorHint2"
-                android:textSize="15sp"/>
-        </android.support.design.widget.TextInputLayout>
+        <www.ht.com.app.view.segmentcontrol.SegmentControl
+            android:id="@+id/segmentControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:textSize="14sp"
+            app:colors="@color/colorPrimary"
+            app:cornerRadius="5dp"
+            app:direction="horizon"
+            app:horizonGap="16dp"
+            app:texts="我是家长|我是老师"
+            app:verticalGap="8dp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <LinearLayout
+            android:id="@+id/loginLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/loginInputPasswd"
-                android:textColorHint="@color/textColorHint2"
-                android:textSize="15sp"/>
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/loginInputLoginId"
+                    android:textColorHint="@color/textColorHint2"
+                    android:textSize="15sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/loginInputPasswd"
+                    android:textColorHint="@color/textColorHint2"
+                    android:textSize="15sp"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/sel_button_yellow_radius"
+            android:text="@string/login"
+            android:textColor="@color/textColorWhite"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/sel_button_green_radius"
+            android:text="@string/register"
+            android:textColor="@color/textColorWhite"/>
+
+        <android.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/loginLayout"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/sel_button_yellow_radius"
-        android:text="@string/login"
-        android:textColor="@color/textColorWhite"/>
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/login"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/sel_button_green_radius"
-        android:text="@string/register"
-        android:textColor="@color/textColorWhite"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -102,10 +105,10 @@
         <ImageView
             android:id="@+id/sina"
             android:layout_width="48dp"
-            android:clickable="true"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:background="@drawable/select_login_logo"
+            android:clickable="true"
             android:padding="12dp"
             android:scaleType="centerInside"
             android:src="@drawable/icon_sina"/>

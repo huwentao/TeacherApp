@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:scaleType="fitStart"
-            android:src="@drawable/logo_2"/>
+            android:src="@drawable/logo_1"/>
         <Button
             android:id="@+id/skip"
             android:layout_width="58dp"

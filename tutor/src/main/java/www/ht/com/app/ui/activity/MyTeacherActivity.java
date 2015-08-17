@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
-import www.ht.com.app.ui.activity.adapter.MyCourseFileRecyclerAdapter;
 import www.ht.com.app.ui.activity.adapter.MyTeacherRecyclerAdapter;
 
 public class MyTeacherActivity extends BaseActivity {

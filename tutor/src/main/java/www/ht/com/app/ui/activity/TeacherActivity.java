@@ -2,26 +2,17 @@ package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-
-import com.orhanobut.logger.Logger;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
-import www.ht.com.app.tools.SnackBarUtils;
 import www.ht.com.app.ui.activity.adapter.TeacherRecyclerAdapter;
-import www.ht.com.app.ui.fragment.adapter.TeacherInfoPagerAdapter;
 
 public class TeacherActivity extends BaseActivity {
 

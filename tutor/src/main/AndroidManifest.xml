@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="www.ht.com.app"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="www.ht.com.app"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -35,11 +36,7 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:windowSoftInputMode="adjustUnspecified">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ui.BaseActivity">
         </activity>
@@ -74,11 +71,7 @@
         <activity
             android:name=".ui.activity.ParentActivity"
             android:label="@string/title_activity_parent">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.activity.MyCourseFileActivity"
