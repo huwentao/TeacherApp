@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import butterknife.Bind;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import www.ht.com.app.R;
