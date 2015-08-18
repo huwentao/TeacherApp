@@ -19,7 +19,12 @@ public class LoadingActivity extends BaseActivity {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == INTO_APP) {
-                callMe(LoginActivity.class);
+                //已登录用户直接进入主界面，未登录用户进行登录
+                if (getTutorApp().isLogined()) {
+                    callMe(MainActivity.class);
+                } else {
+                    callMe(LoginActivity.class);
+                }
                 finish();
             }
         }
@@ -38,6 +43,8 @@ public class LoadingActivity extends BaseActivity {
     protected void onStart() {
         super.onStart();
         handler.sendEmptyMessageDelayed(INTO_APP, 3000);
+        //加载已登录用户 信息
+        getTutorApp().initLoginInfo();
     }
 
     @Override

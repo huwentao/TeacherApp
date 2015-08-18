@@ -16,11 +16,13 @@ public class BaseActivity extends AppCompatActivity {
     private GestureDetector gestureDetector = null;
     private boolean isOpenFlingClose = true; // activity右滑关闭功能开关
     private float flingWidthPX = 0f;
+    private TutorApplication tutorApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         flingWidthPX = DisplayUtil.dip2px(this, 100);
+        tutorApp = (TutorApplication) getApplication();
     }
 
     @Override
@@ -102,5 +104,9 @@ public class BaseActivity extends AppCompatActivity {
      */
     public void setIsOpenFlingClose(boolean isOpenFlingClose) {
         this.isOpenFlingClose = isOpenFlingClose;
+    }
+
+    public TutorApplication getTutorApp() {
+        return tutorApp;
     }
 }

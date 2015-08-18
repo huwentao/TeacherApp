@@ -8,10 +8,13 @@ import android.widget.Button;
 import butterknife.Bind;
 import butterknife.OnClick;
 import www.ht.com.app.R;
+import www.ht.com.app.config.AppType;
 import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.view.segmentcontrol.SegmentControl;
 
 public class LoginActivity extends BaseActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;
+    @Bind(R.id.segmentControl) SegmentControl segmentControl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,21 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         setToolBar(toolbar);
         setIsOpenFlingClose(false);
+        //默认家长登录
+        getTutorApp().setAppConfig(AppType.Parent);
+        segmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
+            @Override
+            public void onSegmentControlClick(int index) {
+                switch (index) {
+                    case 0:
+                        getTutorApp().setAppConfig(AppType.Parent);
+                        break;
+                    case 1:
+                        getTutorApp().setAppConfig(AppType.Teacher);
+                        break;
+                }
+            }
+        });
     }
 
     @OnClick({R.id.login, R.id.register})
