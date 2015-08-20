@@ -26,7 +26,6 @@
     <string name="courseWeekType">本周课程</string>
     <string name="courseMonthType">本月课程</string>
     <string name="findDetailTitle">家长要求</string>
-    <string name="findMapNearbyTitle">附近老师</string>
     <string name="parentCommunication">家长专区</string>
     <string name="seniority">教龄</string>
     <string name="studentAge">学生年龄</string>
@@ -96,4 +95,5 @@
     <string name="title_activity_student_parent">学生家长</string>
     <string name="action_addNewCourse">新增课程</string>
     <string name="action_course">课程</string>
+    <string name="title_activity_near_parent">附近家长</string>
 </resources>

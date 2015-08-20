@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/windowBackgroundLight"
-        app:elevation="6dp">
+        app:elevation="@dimen/elevation">
 
         <include
             layout="@layout/toolbar"/>

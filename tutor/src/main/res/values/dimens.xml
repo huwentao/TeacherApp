@@ -11,4 +11,5 @@
     <dimen name="tabview_image_height">22dp</dimen>
     <dimen name="tabview_image_width">22dp</dimen>
     <dimen name="toolbar_height">45dp</dimen>
+    <dimen name="elevation">2dp</dimen>
 </resources>

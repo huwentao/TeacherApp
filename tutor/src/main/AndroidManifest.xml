@@ -111,6 +111,10 @@
             android:name=".ui.activity.teacher.StudentParentActivity"
             android:label="@string/title_activity_student_parent">
         </activity>
+        <activity
+            android:name=".ui.activity.teacher.NearParentActivity"
+            android:label="@string/title_activity_near_parent">
+        </activity>
     </application>
 
 </manifest>

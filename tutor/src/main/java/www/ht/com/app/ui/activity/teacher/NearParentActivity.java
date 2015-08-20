@@ -1,8 +1,8 @@
-package www.ht.com.app.ui.activity.parent;
+package www.ht.com.app.ui.activity.teacher;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +12,7 @@ import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.fragment.parent.MapFragment;
 
-public class NearTeacherActivity extends BaseActivity {
+public class NearParentActivity extends BaseActivity {
 
     @Bind(R.id.toolbar) Toolbar toolbar;
     private FragmentManager fragmentManager;
@@ -20,13 +20,13 @@ public class NearTeacherActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_near_teacher);
+        setContentView(R.layout.activity_near_parent);
         setToolBar(toolbar);
 
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         MapFragment mapFragment = MapFragment.newInstance(
-                getResources().getString(R.string.findMapNearTeacher)
+                getResources().getString(R.string.findMapNearParent)
         );
         transaction.add(R.id.container, mapFragment, mapFragment.getName());
         transaction.commit();
