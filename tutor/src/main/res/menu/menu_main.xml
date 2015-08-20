@@ -4,7 +4,7 @@
     <item
         android:id="@+id/courseMenu"
         android:icon="@drawable/ic_action_rili"
-        android:title="@string/action_message"
+        android:title="@string/action_course"
         android:visible="false"
         app:showAsAction="always">
         <menu>

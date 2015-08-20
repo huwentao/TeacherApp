@@ -1,9 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:context="www.ht.com.app.ui.activity.parent.MyHomeworkActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never"/>
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/newCourseMenu"
+        android:icon="@drawable/ic_action_plus"
+        android:title="@string/action_addNewCourse"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/courseMenu"
+        android:icon="@drawable/ic_action_rili"
+        android:title="@string/action_course"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/messageMenu"
+        android:icon="@drawable/ic_action_message"
+        android:title="@string/action_message"
+        app:showAsAction="always"/>
 </menu>

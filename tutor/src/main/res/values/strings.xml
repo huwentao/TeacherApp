@@ -94,4 +94,6 @@
     <string name="title_activity_student_homework">学生作业</string>
     <string name="title_activity_my_course">我的课程</string>
     <string name="title_activity_student_parent">学生家长</string>
+    <string name="action_addNewCourse">新增课程</string>
+    <string name="action_course">课程</string>
 </resources>

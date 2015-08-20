@@ -49,7 +49,7 @@ public class TeacherFragment extends BaseFragment {
                             case R.id.myInfo:
                                 getBaseActivity().callMe(TeacherActivity.class);
                                 break;
-                            case R.id.myHomework:
+                            case R.id.myCourses:
                                 getBaseActivity().callMe(MyCourseActivity.class);
                                 break;
                             case R.id.myStudentHomework:
