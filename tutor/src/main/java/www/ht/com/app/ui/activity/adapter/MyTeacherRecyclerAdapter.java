@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.activity.TeacherActivity;
+import www.ht.com.app.ui.activity.parent.TeacherActivity;
 
 /**
  * Created by mokey on 2015/8/16.

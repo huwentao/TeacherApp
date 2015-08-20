@@ -8,20 +8,39 @@
     <include layout="@layout/toolbar"/>
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
+        <www.ht.com.app.view.segmentcontrol.SegmentControl
+            android:id="@+id/segmentControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:textSize="14sp"
+            app:colors="@color/colorPrimary"
+            app:cornerRadius="5dp"
+            app:direction="horizon"
+            app:horizonGap="16dp"
+            app:texts="我是家长|我是老师"
+            app:verticalGap="8dp"/>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
 
             <EditText
-                style="@style/AppEditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/userName"/>
+                android:hint="@string/userName"
+                android:textColorHint="@color/textColorHint2"
+                android:textSize="15sp"/>
+
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -29,24 +48,46 @@
             android:layout_height="wrap_content">
 
             <EditText
-                style="@style/AppEditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/userPhoneNum"
-                android:textColorHint="@color/textColorHint2"/>
+                android:textColorHint="@color/textColorHint2"
+                android:textSize="15sp"/>
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <EditText
-                style="@style/AppEditTextStyle"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/userAgent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/userAgent"/>
+
+            <android.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <www.ht.com.app.view.segmentcontrol.SegmentControl
+                android:id="@+id/agentControl"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/userAgent"
-                android:textColorHint="@color/textColorHint2"/>
-        </android.support.design.widget.TextInputLayout>
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:textSize="14sp"
+                app:colors="@color/shapeOrange"
+                app:cornerRadius="5dp"
+                app:direction="horizon"
+                app:horizonGap="12dp"
+                app:texts="先生|女士"
+                app:verticalGap="6dp"/>
+        </LinearLayout>
+
 
         <Button
             android:layout_width="match_parent"

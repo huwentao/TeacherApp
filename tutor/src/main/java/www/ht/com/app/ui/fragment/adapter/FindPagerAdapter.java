@@ -9,8 +9,8 @@ import java.util.List;
 
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
-import www.ht.com.app.ui.fragment.FindDetailFragment;
-import www.ht.com.app.ui.fragment.MapFragment;
+import www.ht.com.app.ui.fragment.parent.FindDetailFragment;
+import www.ht.com.app.ui.fragment.parent.MapFragment;
 
 /**
  * Created by mokey on 2015/8/7.

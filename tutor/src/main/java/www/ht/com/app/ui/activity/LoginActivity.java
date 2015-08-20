@@ -3,13 +3,14 @@ package www.ht.com.app.ui.activity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 import www.ht.com.app.R;
 import www.ht.com.app.config.AppType;
 import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.activity.parent.ParentMainActivity;
+import www.ht.com.app.ui.activity.teacher.TeacherMainActivity;
 import www.ht.com.app.view.segmentcontrol.SegmentControl;
 
 public class LoginActivity extends BaseActivity {
@@ -43,7 +44,11 @@ public class LoginActivity extends BaseActivity {
     public void viewClick(View view) {
         switch (view.getId()) {
             case R.id.login:
-                callMe(MainActivity.class);
+                if (getTutorApp().getAppConfig().getAppType() == AppType.Parent) {
+                    callMe(ParentMainActivity.class);
+                } else {
+                    callMe(TeacherMainActivity.class);
+                }
 //                finish();
                 break;
             case R.id.register:
@@ -56,7 +61,7 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.skip)
     public void skip() {
-        callMe(MainActivity.class);
+        callMe(ParentMainActivity.class);
         finish();
     }
 }

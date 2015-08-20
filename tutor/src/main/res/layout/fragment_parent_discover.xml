@@ -1,0 +1,31 @@
+<!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowBackgroundLight"
+        app:elevation="6dp">
+
+        <include
+            layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:elevation="@dimen/abc_action_bar_content_inset_material"
+        app:itemTextColor="@color/textColorBlack"
+        app:menu="@menu/menu_parent_discover"/>
+
+</LinearLayout>

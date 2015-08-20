@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 
 import butterknife.ButterKnife;
+import www.ht.com.app.db.DbUtils;
 import www.ht.com.app.tools.DisplayUtil;
 
 public class BaseActivity extends AppCompatActivity {
@@ -100,6 +101,7 @@ public class BaseActivity extends AppCompatActivity {
 
     /**
      * 是否打开右滑关闭功能
+     *
      * @param isOpenFlingClose
      */
     public void setIsOpenFlingClose(boolean isOpenFlingClose) {
@@ -107,6 +109,10 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public TutorApplication getTutorApp() {
-        return tutorApp;
+        return tutorApp = (TutorApplication) getApplication();
+    }
+
+    public DbUtils getDbUtils() {
+        return getTutorApp().getDbUtils();
     }
 }

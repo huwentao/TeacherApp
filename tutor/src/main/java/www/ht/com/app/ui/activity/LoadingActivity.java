@@ -6,8 +6,11 @@ import android.os.Message;
 
 import butterknife.OnClick;
 import www.ht.com.app.R;
+import www.ht.com.app.config.AppType;
 import www.ht.com.app.tools.AppHandler;
 import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.activity.parent.ParentMainActivity;
+import www.ht.com.app.ui.activity.teacher.TeacherMainActivity;
 
 /**
  * APP载入页面，可以作为广告加载页
@@ -21,7 +24,11 @@ public class LoadingActivity extends BaseActivity {
             if (msg.what == INTO_APP) {
                 //已登录用户直接进入主界面，未登录用户进行登录
                 if (getTutorApp().isLogined()) {
-                    callMe(MainActivity.class);
+                    if (getTutorApp().getAppConfig().getAppType() == AppType.Parent) {
+                        callMe(ParentMainActivity.class);
+                    } else {
+                        callMe(TeacherMainActivity.class);
+                    }
                 } else {
                     callMe(LoginActivity.class);
                 }

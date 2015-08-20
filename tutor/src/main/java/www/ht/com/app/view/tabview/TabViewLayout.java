@@ -94,7 +94,7 @@ public class TabViewLayout extends LinearLayout {
      *
      * @param onTabViewChangeListener {@link TabViewLayout.OnTabViewChangeListener}
      */
-    public void setmOnTabViewChangeListener(OnTabViewChangeListener onTabViewChangeListener) {
+    public void setOnTabViewChangeListener(OnTabViewChangeListener onTabViewChangeListener) {
         mOnTabViewChangeListener = onTabViewChangeListener;
     }
 

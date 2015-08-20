@@ -45,7 +45,7 @@ public class TutorApplication extends Application {
      */
     private void initConfig(AppType appType) {
         if (BuildConfig.DEBUG) {
-            LayoutCast.init(this);
+//            LayoutCast.init(this);
             appConfig = Config.getDebugIntance(appType);
             Logger.init(LOGTAG)               // default PRETTYLOGGER or use just init()
                     .setMethodCount(1)            // default 2

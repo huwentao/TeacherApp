@@ -35,7 +35,7 @@
     <string name="contactWay">联系方式</string>
     <string name="location">位置</string>
     <string name="parentAskFor">家长要求</string>
-    <string name="drawer_myinfo">我的信息</string>
+    <string name="drawer_myinfo">个人信息</string>
     <string name="drawer_myteacher">我的老师</string>
     <string name="drawer_myCondition">我的需求</string>
     <string name="drawer_setting">设置</string>
@@ -83,4 +83,12 @@
     <string name="title_activity_near_teacher">附近老师</string>
     <string name="action_message_week">本周课程</string>
     <string name="action_message_month">本月课程</string>
+    <string name="title_activity_teacher_main">TeacherMainActivity</string>
+    <string name="drawer_myStudent">我的学生</string>
+    <string name="drawer_studentParent">学生家长</string>
+    <string name="findMapNearTeacher">附近老师</string>
+    <string name="findMapNearParent">附近家长</string>
+    <string name="communicationTitle">家长帮</string>
+    <string name="other">其他</string>
+    <string name="more">更多</string>
 </resources>

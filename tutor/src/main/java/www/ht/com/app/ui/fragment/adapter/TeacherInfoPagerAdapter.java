@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.ht.com.app.ui.BaseFragment;
-import www.ht.com.app.ui.fragment.TeacherCourseFragment;
-import www.ht.com.app.ui.fragment.TeacherInfoFragment;
+import www.ht.com.app.ui.fragment.teacher.TeacherCourseFragment;
+import www.ht.com.app.ui.fragment.teacher.TeacherInfoFragment;
 
 /**
  * Created by monkey on 2015/8/11.

@@ -12,8 +12,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.activity.NearTeacherActivity;
-import www.ht.com.app.ui.activity.ParentAskActivity;
+import www.ht.com.app.ui.activity.parent.NearTeacherActivity;
+import www.ht.com.app.ui.activity.parent.ParentAskActivity;
 
 /**
  * Created by mokey on 2015/8/16.

@@ -10,7 +10,7 @@
     <!--8.editTextColor：默认EditView输入框字体的颜色。-->
 
     <!-- Base application theme. -->
-    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowNoTitle">true</item>
 
@@ -131,7 +131,7 @@
 
     </style>
 
-    <style name="test" parent="AlertDialog.AppCompat">
+    <style name="test" parent="Widget.Design.NavigationView">
 
     </style>
 </resources>

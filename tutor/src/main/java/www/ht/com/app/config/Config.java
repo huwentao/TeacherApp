@@ -45,6 +45,8 @@ public class Config {
     public static Config getDebugIntance(AppType appType) {
         if (config == null) {
             config = new Config(appType);
+        } else {
+            config.mAppType = appType;
         }
         config.mServerConfig = ServerConfig.getTestConfig();
         return config;

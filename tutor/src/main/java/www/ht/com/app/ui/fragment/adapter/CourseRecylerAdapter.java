@@ -17,7 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.ht.com.app.R;
 import www.ht.com.app.data.Course;
-import www.ht.com.app.ui.fragment.CourseDetailFragment;
+import www.ht.com.app.ui.fragment.parent.CourseDetailFragment;
 
 /**
  * Created by mokey on 2015/8/7.
