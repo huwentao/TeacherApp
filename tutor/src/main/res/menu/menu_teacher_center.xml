@@ -8,19 +8,19 @@
             android:title="@string/drawer_myinfo"
             app:showAsAction="ifRoom|withText"/>
         <item
-            android:id="@+id/myCourseware"
+            android:id="@+id/myCourses"
             android:icon="@drawable/icon_teacher"
-            android:title="@string/drawer_courseware"
-            app:showAsAction="ifRoom|withText"/>
-        <item
-            android:id="@+id/myStudent"
-            android:icon="@drawable/icon_condition"
-            android:title="@string/drawer_myStudent"
+            android:title="@string/drawer_myCourses"
             app:showAsAction="ifRoom|withText"/>
         <item
             android:id="@+id/studentParent"
             android:icon="@drawable/icon_course"
             android:title="@string/drawer_studentParent"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/myStudentHomework"
+            android:icon="@drawable/icon_condition"
+            android:title="@string/drawer_myStudentHomework"
             app:showAsAction="ifRoom|withText"/>
         <item
             android:id="@+id/setting"

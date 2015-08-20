@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
-import www.ht.com.app.ui.activity.parent.MyCourseFileActivity;
+import www.ht.com.app.ui.activity.parent.MyHomeworkActivity;
 import www.ht.com.app.ui.activity.parent.MyCourseNeedActivity;
 import www.ht.com.app.ui.activity.parent.MyTeacherActivity;
 import www.ht.com.app.ui.activity.parent.ParentActivity;
@@ -55,8 +55,8 @@ public class PersonFragment extends BaseFragment {
                             case R.id.myCondition:
                                 getBaseActivity().callMe(MyCourseNeedActivity.class);
                                 break;
-                            case R.id.myCourseware:
-                                getBaseActivity().callMe(MyCourseFileActivity.class);
+                            case R.id.myHomework:
+                                getBaseActivity().callMe(MyHomeworkActivity.class);
                                 break;
                             case R.id.setting:
                                 getBaseActivity().callMe(SettingActivity.class);

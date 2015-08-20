@@ -12,13 +12,9 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.activity.SettingActivity;
-import www.ht.com.app.ui.activity.parent.MyCourseFileActivity;
-import www.ht.com.app.ui.activity.parent.MyCourseNeedActivity;
-import www.ht.com.app.ui.activity.parent.MyTeacherActivity;
-import www.ht.com.app.ui.activity.parent.ParentActivity;
 import www.ht.com.app.ui.activity.parent.TeacherActivity;
 import www.ht.com.app.ui.activity.teacher.MyCourseActivity;
-import www.ht.com.app.ui.activity.teacher.MyStudentActivity;
+import www.ht.com.app.ui.activity.teacher.StudentHomeworkActivity;
 import www.ht.com.app.ui.activity.teacher.StudentParentActivity;
 
 /**
@@ -53,11 +49,11 @@ public class TeacherFragment extends BaseFragment {
                             case R.id.myInfo:
                                 getBaseActivity().callMe(TeacherActivity.class);
                                 break;
-                            case R.id.myCourseware:
+                            case R.id.myHomework:
                                 getBaseActivity().callMe(MyCourseActivity.class);
                                 break;
-                            case R.id.myStudent:
-                                getBaseActivity().callMe(MyStudentActivity.class);
+                            case R.id.myStudentHomework:
+                                getBaseActivity().callMe(StudentHomeworkActivity.class);
                                 break;
                             case R.id.studentParent:
                                 getBaseActivity().callMe(StudentParentActivity.class);

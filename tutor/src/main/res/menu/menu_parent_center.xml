@@ -18,9 +18,9 @@
             android:title="@string/drawer_myCondition"
             app:showAsAction="ifRoom|withText"/>
         <item
-            android:id="@+id/myCourseware"
+            android:id="@+id/myHomework"
             android:icon="@drawable/icon_course"
-            android:title="@string/drawer_courseware"
+            android:title="@string/drawer_myHomework"
             app:showAsAction="ifRoom|withText"/>
         <item
             android:id="@+id/setting"

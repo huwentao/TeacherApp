@@ -39,7 +39,7 @@
     <string name="drawer_myteacher">我的老师</string>
     <string name="drawer_myCondition">我的需求</string>
     <string name="drawer_setting">设置</string>
-    <string name="drawer_courseware">我的课件</string>
+    <string name="drawer_myHomework">课后练习</string>
     <string name="teacherCommunication">老师专区</string>
     <string name="communication">随便聊</string>
     <string name="studyInfo">学习资讯</string>
@@ -69,7 +69,7 @@
     <string name="register">注册</string>
     <string name="companyName">湖南开心教育科技有限公司</string>
     <string name="title_activity_parent">我的信息</string>
-    <string name="title_activity_my_courseFiles">我的课件</string>
+    <string name="title_activity_my_homework">课后练习</string>
     <string name="title_activity_my_teacher">我的老师</string>
     <string name="title_activity_my_course_need">我的需求</string>
     <string name="title_activity_add_new_course">新增课程</string>
@@ -83,12 +83,15 @@
     <string name="title_activity_near_teacher">附近老师</string>
     <string name="action_message_week">本周课程</string>
     <string name="action_message_month">本月课程</string>
-    <string name="title_activity_teacher_main">TeacherMainActivity</string>
-    <string name="drawer_myStudent">我的学生</string>
+    <string name="drawer_myStudentHomework">学生作业</string>
     <string name="drawer_studentParent">学生家长</string>
     <string name="findMapNearTeacher">附近老师</string>
     <string name="findMapNearParent">附近家长</string>
     <string name="communicationTitle">家长帮</string>
     <string name="other">其他</string>
     <string name="more">更多</string>
+    <string name="drawer_myCourses">我的课程</string>
+    <string name="title_activity_student_homework">学生作业</string>
+    <string name="title_activity_my_course">我的课程</string>
+    <string name="title_activity_student_parent">学生家长</string>
 </resources>

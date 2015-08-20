@@ -12,14 +12,14 @@ import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.activity.adapter.MyTeacherRecyclerAdapter;
 
-public class MyStudentActivity extends BaseActivity {
+public class StudentHomeworkActivity extends BaseActivity {
     @Bind(R.id.recyclerView) RecyclerView recyclerView;
     @Bind(R.id.toolbar) Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_teacher);
+        setContentView(R.layout.activity_student_homework);
         setToolBar(toolbar);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
