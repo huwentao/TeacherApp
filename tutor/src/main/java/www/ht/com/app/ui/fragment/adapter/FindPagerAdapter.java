@@ -24,7 +24,7 @@ public class FindPagerAdapter extends FragmentPagerAdapter {
                 activity.getResources().getString(R.string.findDetailTitle)
         ));
         fragments.add(MapFragment.newInstance(
-                activity.getResources().getString(R.string.findMapNearbyTitle)
+                activity.getResources().getString(R.string.findMapNearTeacher)
         ));
     }
 
