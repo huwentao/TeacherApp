@@ -34,7 +34,7 @@
         android:background="@drawable/sel_button_green_radius"
         android:clickable="true"
         android:gravity="center"
-        android:text="@string/findMapNearbyTitle"
+        android:text="@string/findMapNearTeacher"
         android:textColor="@color/textColorWhite"
         android:textSize="16sp"/>
 
