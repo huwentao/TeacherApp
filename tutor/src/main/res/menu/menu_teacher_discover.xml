@@ -12,12 +12,12 @@
             android:title="@string/communicationTitle">
             <menu>
                 <item
-                    android:id="@+id/parentCommunication"
+                    android:id="@+id/parentTalk"
                     android:icon="@drawable/icon_parent"
                     android:title="@string/parentCommunication"
                     app:showAsAction="withText|ifRoom"/>
                 <item
-                    android:id="@+id/teacherCommunication"
+                    android:id="@+id/teacherTalk"
                     android:icon="@drawable/icon_teacher"
                     android:title="@string/teacherCommunication"
                     app:showAsAction="withText|ifRoom"/>

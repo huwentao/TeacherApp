@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="www.ht.com.app"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="www.ht.com.app">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -23,7 +22,7 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="NDinBCL2YmTI5xtFilLfeNXp"/>
-        <!--公共-->
+        <!-- 公共 -->
         <activity
             android:name=".ui.activity.LoadingActivity"
             android:label="@string/title_activity_loading">
@@ -57,9 +56,8 @@
             android:name=".ui.activity.RegisterActivity"
             android:label="@string/title_activity_register">
         </activity>
-        <!--家长-->
-        <activity
-            android:name=".ui.activity.parent.ParentMainActivity">
+        <!-- 家长 -->
+        <activity android:name=".ui.activity.parent.ParentMainActivity">
         </activity>
         <activity
             android:name=".ui.activity.parent.TeacherActivity"
@@ -81,7 +79,6 @@
             android:name=".ui.activity.parent.MyCourseNeedActivity"
             android:label="@string/title_activity_my_course_need">
         </activity>
-
         <activity
             android:name=".ui.activity.parent.ParentAskActivity"
             android:label="@string/title_activity_parent_ask">
@@ -91,9 +88,8 @@
             android:label="@string/title_activity_near_teacher">
         </activity>
 
-        <!--教师-->
-        <activity
-            android:name=".ui.activity.teacher.TeacherMainActivity">
+        <!-- 教师 -->
+        <activity android:name=".ui.activity.teacher.TeacherMainActivity">
         </activity>
         <activity
             android:name=".ui.activity.teacher.StudentHomeworkActivity"
@@ -114,6 +110,22 @@
         <activity
             android:name=".ui.activity.teacher.NearParentActivity"
             android:label="@string/title_activity_near_parent">
+        </activity>
+        <activity
+            android:name=".ui.activity.StudyInfoActivity"
+            android:label="@string/title_activity_study_info">
+        </activity>
+        <activity
+            android:name=".ui.activity.ParentTalkActivity"
+            android:label="@string/title_activity_parent_talk">
+        </activity>
+        <activity
+            android:name=".ui.activity.TeacherTalkActivity"
+            android:label="@string/title_activity_teacher_talk">
+        </activity>
+        <activity
+            android:name=".ui.activity.CommunicationActivity"
+            android:label="@string/title_activity_communication">
         </activity>
     </application>
 

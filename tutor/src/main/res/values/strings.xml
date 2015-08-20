@@ -96,4 +96,8 @@
     <string name="action_addNewCourse">新增课程</string>
     <string name="action_course">课程</string>
     <string name="title_activity_near_parent">附近家长</string>
+    <string name="title_activity_study_info">StudyInfoActivity</string>
+    <string name="title_activity_parent_talk">ParentTalkActivity</string>
+    <string name="title_activity_teacher_talk">TeacherTalkActivity</string>
+    <string name="title_activity_communication">CommunicationActivity</string>
 </resources>

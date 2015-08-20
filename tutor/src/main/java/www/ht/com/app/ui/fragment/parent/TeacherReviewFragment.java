@@ -50,6 +50,8 @@ public class TeacherReviewFragment extends BaseFragment {
         recyclerView.setLayoutManager(layoutManager);
         ReviewRecyclerAdapter recylerAdapter = new ReviewRecyclerAdapter();
         recyclerView.setAdapter(recylerAdapter);
+
+
     }
 
 }
