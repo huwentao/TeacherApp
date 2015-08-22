@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/studyInfo"
-            android:icon="@drawable/icon_book"
+            android:icon="@drawable/icon_information"
             android:title="@string/studyInfo"
             app:showAsAction="withText|ifRoom"/>
         <item
@@ -34,7 +34,7 @@
             <menu>
                 <item
                     android:id="@+id/findMapNearbyTitle"
-                    android:icon="@drawable/icon_communication"
+                    android:icon="@drawable/icon_near"
                     android:title="@string/findMapNearParent"
                     app:showAsAction="withText|ifRoom"/>
             </menu>

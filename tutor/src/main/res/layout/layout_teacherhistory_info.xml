@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
-    <TextView
-        style="@style/line_h_background"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:text="过往经历"/>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppCardViewStyle">
 
-    <TextView style="@style/line_h"/>
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="1995年07月——至今"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:ellipsize="end"
-        android:gravity="top|left"
-        android:lineSpacingExtra="3dp"
-        android:maxLines="4"
-        android:text="最简单英语教学方法实践者。
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="过往经历"/>
+
+        <TextView style="@style/line_h"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="1995年07月——至今"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:gravity="top|left"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="4"
+            android:text="最简单英语教学方法实践者。
 长期执教重点高中高三英语。
 在专业教学上格物致知，浸淫滋采，贯通多种版本教材，在基础英语语言逻辑研究方面成一家之言。继5种基本句子句型之后"
-        />
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="全部经历"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SelectButtonWhiteStyle"
+            android:text="全部经历"/>
 
-</LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

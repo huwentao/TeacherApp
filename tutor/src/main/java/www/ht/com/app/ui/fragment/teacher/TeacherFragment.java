@@ -12,7 +12,7 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.activity.SettingActivity;
-import www.ht.com.app.ui.activity.parent.TeacherActivity;
+import www.ht.com.app.ui.activity.teacher.TeacherActivity;
 import www.ht.com.app.ui.activity.teacher.MyCourseActivity;
 import www.ht.com.app.ui.activity.teacher.StudentHomeworkActivity;
 import www.ht.com.app.ui.activity.teacher.StudentParentActivity;

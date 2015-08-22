@@ -1,81 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppCardViewStyle">
 
-    <TextView
-        android:id="@+id/lineBackground"
-        style="@style/line_h_background"/>
-
-    <TextView
-        android:id="@+id/lastestCourseTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lineBackground"
-        android:padding="12dp"
-        android:text="课程"/>
-
-    <TextView
-        android:id="@+id/lineTitle"
-        style="@style/line_h"
-        android:layout_below="@+id/lastestCourseTitle"/>
-
-    <com.github.siyamed.shapeimageview.CircularImageView
-        android:id="@+id/userPhoto"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_below="@+id/lineTitle"
-        android:layout_gravity="center|bottom"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="45dp"
-        android:src="@drawable/test_mm"
-        app:siBorderWidth="0dp"
-        />
-
-    <LinearLayout
-        android:id="@+id/courseInfo"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lineTitle"
-        android:layout_toRightOf="@+id/userPhoto"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
 
         <TextView
-            android:id="@+id/teacherName"
+            android:id="@+id/lastestCourseTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:text="李老师"/>
+            android:layout_below="@+id/lineBackground"
+            android:padding="12dp"
+            android:text="课程"/>
 
         <TextView
-            android:id="@+id/courseContent"
+            android:id="@+id/lineTitle"
+            style="@style/line_h"
+            android:layout_below="@+id/lastestCourseTitle"/>
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/lineTitle"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="45dp"
+            android:src="@drawable/icon_user_none_photo"
+            app:siBorderWidth="0dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/courseInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:paddingBottom="8dp"
-            android:paddingRight="16dp"
-            android:paddingTop="8dp"
-            android:text="三看分析法妙解考研英语难句分析法妙解考研英语难句分析法妙解考研英语难句分析法妙解考研英语难句"/>
+            android:layout_below="@+id/lineTitle"
+            android:layout_toRightOf="@+id/userPhoto"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/courseTime"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/teacherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="李老师"/>
+
+            <TextView
+                android:id="@+id/courseContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="8dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="三看分析法妙解考研英语难句分析法妙解考研英语难句分析法妙解考研英语难句分析法妙解考研英语难句"/>
+
+            <TextView
+                android:id="@+id/courseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingRight="16dp"
+                android:text="2015-08-12 20:12"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="2015-08-12 20:12"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/courseInfo"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="更多课程"/>
-</RelativeLayout>
+            android:layout_below="@+id/courseInfo"
+            style="@style/SelectButtonWhiteStyle"
+            android:text="更多课程"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -19,9 +19,9 @@
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="56dp"
-        android:src="@drawable/test_user_photo"
-        app:siBorderColor="@color/white"
-        app:siBorderWidth="2dp"
+        android:padding="16dp"
+        android:src="@drawable/icon_camara"
+        app:siForeground="@color/white"
         />
 
     <TextView

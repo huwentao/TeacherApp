@@ -19,7 +19,7 @@
             app:showAsAction="ifRoom|withText"/>
         <item
             android:id="@+id/myHomework"
-            android:icon="@drawable/icon_course"
+            android:icon="@drawable/icon_homework"
             android:title="@string/drawer_myHomework"
             app:showAsAction="ifRoom|withText"/>
         <item

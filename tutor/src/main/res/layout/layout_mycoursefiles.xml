@@ -19,7 +19,7 @@
             android:layout_below="@+id/lineTitle"
             android:layout_gravity="center|bottom"
             android:layout_margin="16dp"
-            android:src="@drawable/test_mm"
+            android:src="@drawable/icon_user_none_photo"
             app:siBorderWidth="0dp"
             />
 

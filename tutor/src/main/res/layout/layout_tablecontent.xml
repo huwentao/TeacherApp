@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="学生年龄"
-            android:padding="6dp"
+            android:padding="5dp"
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
 
@@ -38,7 +38,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:padding="6dp"
+            android:padding="5dp"
             android:text="8~12岁"
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="教龄"
-            android:padding="6dp"
+            android:padding="5dp"
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
 
@@ -62,7 +62,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="1~3年"
-            android:padding="6dp"
+            android:padding="5dp"
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
 
@@ -93,7 +93,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="位置"
-            android:padding="6dp"
+            android:padding="5dp"
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
 
@@ -105,7 +105,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="长沙市天心区"
-            
+
             android:textColor="@color/textColorLight"
             android:textSize="14sp"/>
 

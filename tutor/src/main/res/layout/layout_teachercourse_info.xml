@@ -1,204 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppCardViewStyle">
 
-    <TextView
-        style="@style/line_h_background"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:text="课程"/>
-
-    <TextView style="@style/line_h"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/select_button_white"
-        android:clickable="true"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/courseName1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="奥数培训"
-            android:textSize="16sp"/>
+            android:padding="12dp"
+            android:text="课程"/>
 
-        <RatingBar
-            android:id="@+id/ratingBar1"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
+        <TextView style="@style/line_h"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/courseName1"
-            android:isIndicator="true"
-            android:progress="45"/>
+            android:background="@drawable/select_button_white"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/courseName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奥数培训"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseName1"
+                android:isIndicator="true"
+                android:progress="45"/>
+
+            <TextView
+                android:id="@+id/free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar1"
+                android:text="免费"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/free"
+                android:text="￥200"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sel_button_yellow_radius"
+                android:text="预约报名"
+                android:textColor="@color/textColorWhite"/>
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/free"
-            android:layout_width="wrap_content"
+            style="@style/line_h"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar1"
-            android:text="免费"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"/>
+            android:background="@drawable/select_button_white"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/courseName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奥数培训"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseName2"
+                android:isIndicator="true"
+                android:progress="45"/>
+
+            <TextView
+                android:id="@+id/free2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar2"
+                android:text="免费"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/free2"
+                android:text="￥200"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sel_button_yellow_radius"
+                android:text="预约报名"
+                android:textColor="@color/textColorWhite"/>
+        </RelativeLayout>
 
         <TextView
-            android:layout_width="wrap_content"
+            style="@style/line_h"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar1"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@+id/free"
-            android:text="￥200"
-            android:textSize="14sp"/>
+            android:background="@drawable/select_button_white"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/courseName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奥数培训"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar3"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseName3"
+                android:isIndicator="true"
+                android:progress="45"/>
+
+            <TextView
+                android:id="@+id/free3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar3"
+                android:text="免费"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/free3"
+                android:text="￥200"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sel_button_yellow_radius"
+                android:text="预约报名"
+                android:textColor="@color/textColorWhite"/>
+        </RelativeLayout>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="28dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/sel_button_yellow_radius"
-            android:text="预约报名"
-            android:textColor="@color/textColorWhite"/>
-    </RelativeLayout>
-
-    <TextView
-        style="@style/line_h"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/select_button_white"
-        android:clickable="true"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/courseName2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="奥数培训"
-            android:textSize="16sp"/>
-
-        <RatingBar
-            android:id="@+id/ratingBar2"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/courseName2"
-            android:isIndicator="true"
-            android:progress="45"/>
-
-        <TextView
-            android:id="@+id/free2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar2"
-            android:text="免费"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar2"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@+id/free2"
-            android:text="￥200"
-            android:textSize="14sp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="28dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/sel_button_yellow_radius"
-            android:text="预约报名"
-            android:textColor="@color/textColorWhite"/>
-    </RelativeLayout>
-
-    <TextView
-        style="@style/line_h"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/select_button_white"
-        android:clickable="true"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/courseName3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="奥数培训"
-            android:textSize="16sp"/>
-
-        <RatingBar
-            android:id="@+id/ratingBar3"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/courseName3"
-            android:isIndicator="true"
-            android:progress="45"/>
-
-        <TextView
-            android:id="@+id/free3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar3"
-            android:text="免费"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ratingBar3"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@+id/free3"
-            android:text="￥200"
-            android:textSize="14sp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="28dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/sel_button_yellow_radius"
-            android:text="预约报名"
-            android:textColor="@color/textColorWhite"/>
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="全部课程"/>
-
-    <TextView
-        style="@style/line_h_background"/>
-
-    <www.ht.com.app.view.teacherrating.TeacherInfoView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-</LinearLayout>
+            style="@style/SelectButtonWhiteStyle"
+            android:text="全部课程"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -16,9 +16,10 @@ import www.ht.com.app.R;
 public class TeacherRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TEACHER_INFO = 1;
     private static final int TEACHER_COURSE = 2;
-    private static final int TEACHER_HISTORY = 3;
-    private static final int TEACHER_SHARE = 4;
-    private static final int TEACHER_RATING = 5;
+    private static final int TEACHER_BREF = 3;
+    private static final int TEACHER_HISTORY = 4;
+    private static final int TEACHER_SHARE = 5;
+    private static final int TEACHER_RATING = 6;
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,6 +50,11 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                         .inflate(R.layout.layout_teachercourse_info, parent, false);
                 viewHolder = new TeacherCourse(courseView);
                 break;
+            case TEACHER_BREF:
+                View breafView = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.layout_teacherbref_info, parent, false);
+                viewHolder = new TeacherBref(breafView);
+                break;
         }
         return viewHolder;
     }
@@ -60,7 +66,7 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 6;
     }
 
     @Override
@@ -71,10 +77,12 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             case 1:
                 return TEACHER_COURSE;
             case 2:
-                return TEACHER_HISTORY;
+                return TEACHER_BREF;
             case 3:
-                return TEACHER_SHARE;
+                return TEACHER_HISTORY;
             case 4:
+                return TEACHER_SHARE;
+            case 5:
                 return TEACHER_RATING;
         }
         return super.getItemViewType(position);
@@ -111,6 +119,13 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     static class TeacherCourse extends RecyclerView.ViewHolder {
 
         public TeacherCourse(View itemView) {
+            super(itemView);
+        }
+    }
+
+    static class TeacherBref extends RecyclerView.ViewHolder {
+
+        public TeacherBref(View itemView) {
             super(itemView);
         }
     }

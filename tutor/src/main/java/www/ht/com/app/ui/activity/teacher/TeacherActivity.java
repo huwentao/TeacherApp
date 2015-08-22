@@ -1,4 +1,4 @@
-package www.ht.com.app.ui.activity.parent;
+package www.ht.com.app.ui.activity.teacher;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;

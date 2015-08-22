@@ -1,128 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
-
-    <TextView
-        style="@style/line_h_background"/>
-
-    <TextView
-        android:id="@+id/lastestCourseTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:text="每日推荐"/>
-
-    <TextView
-        style="@style/line_h"/>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppCardViewStyle">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <android.support.v4.widget.Space
-            android:layout_width="8dp"
-            android:layout_height="32dp"/>
-
-        <RelativeLayout
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/lastestCourseTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_borde_blacklight">
+            android:padding="12dp"
+            android:text="每日推荐"/>
 
-            <TextView
-                android:id="@+id/courseCommentName1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:lines="3"
-                android:padding="12dp"
-                android:text="“三看”分析法妙解考研英语难句！"
-                android:textColor="@color/textColorWhite"/>
+        <TextView
+            style="@style/line_h"/>
 
-            <com.github.siyamed.shapeimageview.CircularImageView
-                android:id="@+id/userPhoto1"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/courseCommentName1"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="-16dp"
-                android:src="@drawable/test_mm"
-                app:siBorderColor="@color/white"
-                app:siBorderWidth="1dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/courseCommentName1"
-                android:layout_marginLeft="4dp"
-                android:maxLines="2"
-                android:padding="8dp"
-                android:text="李老师"/>
-
-        </RelativeLayout>
-
-        <android.support.v4.widget.Space
-            android:layout_width="32dp"
-            android:layout_height="32dp"/>
-
-        <RelativeLayout
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_borde_blacklight">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-            <TextView
-                android:id="@+id/courseCommentName"
-                android:layout_width="match_parent"
+            <android.support.v4.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="32dp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:lines="3"
-                android:padding="12dp"
-                android:text="“三看”分析法妙解考研英语难句！"
-                android:textColor="@color/textColorWhite"/>
+                android:layout_weight="1"
+                android:background="@drawable/shape_borde_blacklight">
 
-            <com.github.siyamed.shapeimageview.CircularImageView
-                android:id="@+id/userPhoto"
+                <TextView
+                    android:id="@+id/courseCommentName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:lines="3"
+                    android:padding="12dp"
+                    android:text="“三看”分析法妙解考研英语难句！"
+                    android:textColor="@color/textColorWhite"/>
+
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/userPhoto1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/courseCommentName1"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="-16dp"
+                    android:src="@drawable/icon_user_none_photo"
+                    app:siBorderColor="@color/white"
+                    app:siBorderWidth="1dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/courseCommentName1"
+                    android:layout_marginLeft="4dp"
+                    android:maxLines="2"
+                    android:padding="8dp"
+                    android:text="李老师"/>
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.Space
                 android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/courseCommentName"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="-16dp"
-                android:src="@drawable/test_mm"
-                app:siBorderColor="@color/white"
-                app:siBorderWidth="1dp"/>
+                android:layout_height="32dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/courseCommentName"
-                android:layout_marginLeft="4dp"
-                android:maxLines="2"
-                android:padding="8dp"
-                android:text="李老师"/>
+                android:layout_weight="1"
+                android:background="@drawable/shape_borde_blacklight">
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/courseCommentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:lines="3"
+                    android:padding="12dp"
+                    android:text="“三看”分析法妙解考研英语难句！"
+                    android:textColor="@color/textColorWhite"/>
 
-        <android.support.v4.widget.Space
-            android:layout_width="8dp"
-            android:layout_height="32dp"/>
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/userPhoto"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/courseCommentName"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="-16dp"
+                    android:src="@drawable/icon_user_none_photo"
+                    app:siBorderColor="@color/white"
+                    app:siBorderWidth="1dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/courseCommentName"
+                    android:layout_marginLeft="4dp"
+                    android:maxLines="2"
+                    android:padding="8dp"
+                    android:text="李老师"/>
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="32dp"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userContent"
+            style="@style/SelectButtonWhiteStyle"
+            android:text="更多推荐"/>
+
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/userContent"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="更多推荐"/>
-
-    <TextView
-        style="@style/line_h_background"/>
-</LinearLayout>
+</android.support.v7.widget.CardView>

@@ -59,13 +59,13 @@
 
             <ImageView
                 android:id="@+id/fileImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="8dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_action_homework"/>
+                android:scaleType="fitXY"
+                android:padding="8dp"
+                android:src="@drawable/icon_attach"/>
 
             <TextView
                 android:id="@+id/fileTitle"

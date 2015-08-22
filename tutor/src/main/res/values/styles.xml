@@ -30,7 +30,8 @@
         <item name="colorControlActivated">@color/colorPrimary</item>
         <item name="android:textColorSecondary">@color/colorPrimary</item>
 
-
+        <item name="android:ratingBarStyle">@style/AppRattingStyle</item>
+        <item name="android:ratingBarStyleSmall">@style/AppRattingStyle</item>
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">
@@ -129,6 +130,29 @@
 
     <style name="AppSnackBar" parent="Widget.Design.Snackbar">
 
+    </style>
+
+    <style name="SelectButtonWhiteStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/select_button_white</item>
+    </style>
+
+    <style name="AppCardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/windowBackground</item>
+        <item name="cardElevation">@dimen/elevation</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="AppRattingStyle" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/layer_star_yellow_bar_full</item>
+        <item name="android:indeterminateDrawable">@drawable/layer_star_yellow_bar_full</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:maxHeight">36dp</item>
     </style>
 
     <style name="test" parent="Widget.Design.NavigationView">
