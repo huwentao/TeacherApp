@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.tools;
 
 import android.widget.Filter;
@@ -6,7 +10,7 @@ import android.widget.Filterable;
 import java.util.ArrayList;
 import java.util.List;
 
-import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.core.BaseActivity;
 
 /**
  * Created by monkey on 2015/8/17.

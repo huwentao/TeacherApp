@@ -1,8 +1,12 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.teacher;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +21,7 @@ import butterknife.Bind;
 import www.ht.com.app.R;
 import www.ht.com.app.data.Course;
 import www.ht.com.app.data.CourseFile;
-import www.ht.com.app.ui.BaseFragment;
+import www.ht.com.app.ui.core.BaseFragment;
 import www.ht.com.app.ui.fragment.adapter.CourseRecylerAdapter;
 
 /**

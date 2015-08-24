@@ -1,11 +1,13 @@
-package www.ht.com.app.tools;
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
+package www.ht.com.app.ui.core;
 
 import android.os.Handler;
 import android.os.Message;
 
 import java.lang.ref.WeakReference;
-
-import www.ht.com.app.ui.BaseActivity;
 
 /**
  * Created by mokey on 2015/8/11.
@@ -56,5 +58,9 @@ public abstract class AppHandler {
             weakReference = null;
         }
 
+    }
+
+    public StaticHandler getHandler() {
+        return handler;
     }
 }

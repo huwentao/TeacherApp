@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.teacher;
 
 
@@ -12,7 +16,7 @@ import android.view.ViewGroup;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseFragment;
+import www.ht.com.app.ui.core.BaseFragment;
 import www.ht.com.app.ui.fragment.adapter.ReviewRecyclerAdapter;
 
 /**

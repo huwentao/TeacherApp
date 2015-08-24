@@ -1,23 +1,24 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.test.ApplicationTestCase;
 
-import com.alibaba.fastjson.JSON;
 import com.orhanobut.logger.Logger;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 import www.ht.com.app.config.Config;
-import www.ht.com.app.data.LoginUser;
 import www.ht.com.app.net.APPRequest;
 import www.ht.com.app.net.LoggingInterceptor;
-import www.ht.com.app.ui.TutorApplication;
+import www.ht.com.app.ui.core.TutorApplication;
 
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>

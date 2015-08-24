@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.activity.teacher;
 
 import android.os.Bundle;
@@ -11,8 +15,8 @@ import android.view.MenuItem;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.activity.adapter.TeacherRecyclerAdapter;
+import www.ht.com.app.ui.core.BaseActivity;
 
 public class TeacherActivity extends BaseActivity {
 

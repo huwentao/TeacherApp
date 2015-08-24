@@ -1,15 +1,19 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.activity.parent;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.core.BaseActivity;
 import www.ht.com.app.ui.fragment.parent.MapFragment;
 
 public class NearTeacherActivity extends BaseActivity {

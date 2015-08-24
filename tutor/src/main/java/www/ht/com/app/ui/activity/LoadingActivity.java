@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.activity;
 
 import android.os.Bundle;
@@ -7,10 +11,10 @@ import android.os.Message;
 import butterknife.OnClick;
 import www.ht.com.app.R;
 import www.ht.com.app.config.AppType;
-import www.ht.com.app.tools.AppHandler;
-import www.ht.com.app.ui.BaseActivity;
 import www.ht.com.app.ui.activity.parent.ParentMainActivity;
 import www.ht.com.app.ui.activity.teacher.TeacherMainActivity;
+import www.ht.com.app.ui.core.AppHandler;
+import www.ht.com.app.ui.core.BaseActivity;
 
 /**
  * APP载入页面，可以作为广告加载页

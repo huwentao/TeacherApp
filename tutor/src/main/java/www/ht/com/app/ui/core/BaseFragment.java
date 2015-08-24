@@ -1,4 +1,8 @@
-package www.ht.com.app.ui;
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
+package www.ht.com.app.ui.core;
 
 
 import android.app.Activity;

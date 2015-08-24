@@ -1,8 +1,12 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.parent;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +14,7 @@ import android.view.ViewGroup;
 import com.baidu.mapapi.map.MapView;
 
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseFragment;
+import www.ht.com.app.ui.core.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.

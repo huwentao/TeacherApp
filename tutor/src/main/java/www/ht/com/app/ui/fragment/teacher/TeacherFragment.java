@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.teacher;
 
 import android.app.Fragment;
@@ -10,12 +14,12 @@ import android.view.ViewGroup;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.activity.SettingActivity;
-import www.ht.com.app.ui.activity.teacher.TeacherActivity;
 import www.ht.com.app.ui.activity.teacher.MyCourseActivity;
 import www.ht.com.app.ui.activity.teacher.StudentHomeworkActivity;
 import www.ht.com.app.ui.activity.teacher.StudentParentActivity;
+import www.ht.com.app.ui.activity.teacher.TeacherActivity;
+import www.ht.com.app.ui.core.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.

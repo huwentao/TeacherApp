@@ -1,7 +1,11 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.parent;
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -10,12 +14,12 @@ import android.view.ViewGroup;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseFragment;
-import www.ht.com.app.ui.activity.parent.MyHomeworkActivity;
+import www.ht.com.app.ui.activity.SettingActivity;
 import www.ht.com.app.ui.activity.parent.MyCourseNeedActivity;
+import www.ht.com.app.ui.activity.parent.MyHomeworkActivity;
 import www.ht.com.app.ui.activity.parent.MyTeacherActivity;
 import www.ht.com.app.ui.activity.parent.ParentActivity;
-import www.ht.com.app.ui.activity.SettingActivity;
+import www.ht.com.app.ui.core.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.activity.parent;
 
 import android.os.Build;
@@ -14,12 +18,12 @@ import java.util.List;
 
 import butterknife.Bind;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseActivity;
-import www.ht.com.app.ui.BaseFragment;
 import www.ht.com.app.ui.activity.MessageActivity;
+import www.ht.com.app.ui.core.BaseActivity;
+import www.ht.com.app.ui.core.BaseFragment;
 import www.ht.com.app.ui.fragment.parent.CourseFragment;
-import www.ht.com.app.ui.fragment.parent.ParentDiscoverFragment;
 import www.ht.com.app.ui.fragment.parent.FindTeacherFragment;
+import www.ht.com.app.ui.fragment.parent.ParentDiscoverFragment;
 import www.ht.com.app.ui.fragment.parent.PersonFragment;
 import www.ht.com.app.ui.fragment.parent.TeacherReviewFragment;
 import www.ht.com.app.view.tabview.TabViewLayout;

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.tools;
 
 import android.database.Cursor;
@@ -12,7 +16,7 @@ import java.util.List;
 import www.ht.com.app.db.DbUtils;
 import www.ht.com.app.db.exception.DbException;
 import www.ht.com.app.db.table.TableUtils;
-import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.core.BaseActivity;
 
 /**
  * Created by monkey on 2015/8/17.

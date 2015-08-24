@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app;
 
 import android.test.ApplicationTestCase;
@@ -12,7 +16,7 @@ import java.io.IOException;
 import www.ht.com.app.config.Config;
 import www.ht.com.app.net.APPRequest;
 import www.ht.com.app.net.LoggingInterceptor;
-import www.ht.com.app.ui.TutorApplication;
+import www.ht.com.app.ui.core.TutorApplication;
 
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>

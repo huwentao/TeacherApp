@@ -1,4 +1,8 @@
-package www.ht.com.app.ui;
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
+package www.ht.com.app.ui.core;
 
 import android.app.Activity;
 import android.app.Application;
@@ -7,7 +11,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.baidu.mapapi.SDKInitializer;
-import com.github.mmin18.layoutcast.LayoutCast;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 

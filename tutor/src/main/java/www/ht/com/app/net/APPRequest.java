@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.net;
 
 import com.alibaba.fastjson.JSON;
@@ -14,7 +18,7 @@ import www.ht.com.app.data.Login;
 import www.ht.com.app.data.Register;
 import www.ht.com.app.data.SetNewPassword;
 import www.ht.com.app.data.Teacher;
-import www.ht.com.app.ui.TutorApplication;
+import www.ht.com.app.ui.core.TutorApplication;
 
 /**
  * Created by mokey on 2015/8/18.
@@ -127,6 +131,10 @@ public class APPRequest {
                 .post(requestBody).build();
     }
 
+    /**
+     * @param hash
+     * @return
+     */
     public static String hexString(byte[] hash) {
         StringBuilder hex = new StringBuilder(hash.length * 2);
         for (byte b : hash) {
@@ -136,6 +144,10 @@ public class APPRequest {
         return hex.toString();
     }
 
+    /**
+     * @param md5String
+     * @return
+     */
     public static String MD5(String md5String) {
         MessageDigest md5 = null;
         try {

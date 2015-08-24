@@ -1,12 +1,15 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import www.ht.com.app.R;
-import www.ht.com.app.ui.BaseActivity;
+import www.ht.com.app.ui.core.BaseActivity;
 
 public class CommunicationActivity extends BaseActivity {
 

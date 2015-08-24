@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.ui.fragment.adapter;
 
 import android.support.v4.app.Fragment;
@@ -7,7 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import www.ht.com.app.ui.BaseFragment;
+import www.ht.com.app.ui.core.BaseFragment;
 import www.ht.com.app.ui.fragment.teacher.TeacherCourseFragment;
 import www.ht.com.app.ui.fragment.teacher.TeacherInfoFragment;
 
