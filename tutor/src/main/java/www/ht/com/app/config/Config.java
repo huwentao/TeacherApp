@@ -12,11 +12,9 @@ public class Config {
     public static final String LOGIN_USERNAME = "login_userName";
     public static final String LOGIN_TYPE = "login_type";
     public static final String LOGIN_LOGINEDTIME = "login_loginedTime";
-
+    private static Config config = null;
     private AppType mAppType;
     private ServerConfig mServerConfig = null;
-
-    private static Config config = null;
 
     private Config(AppType appType) {
         mAppType = appType;
@@ -52,14 +50,32 @@ public class Config {
         return config;
     }
 
-    static class ServerConfig {
+    public static AppType getAppType(int type) {
+        switch (type) {
+            case 1:
+                return AppType.Teacher;
+            case 2:
+                return AppType.Parent;
+        }
+        return AppType.Parent;
+    }
+
+    public AppType getAppType() {
+        return mAppType;
+    }
+
+    public ServerConfig getmServerConfig() {
+        return mServerConfig;
+    }
+
+    public static class ServerConfig {
         private static String SERVERADDRESS = "";
         private static int SERVERPORT = 80;
 
         public static ServerConfig getTestConfig() {
             ServerConfig serverConfig = new ServerConfig();
-            SERVERADDRESS = "";
-            SERVERPORT = 8080;
+            SERVERADDRESS = "http://10.9.10.173";
+            SERVERPORT = 80;
             return serverConfig;
         }
 
@@ -69,19 +85,9 @@ public class Config {
             SERVERPORT = 8080;
             return serverConfig;
         }
-    }
 
-    public AppType getAppType() {
-        return mAppType;
-    }
-
-    public static AppType getAppType(int type) {
-        switch (type) {
-            case 1:
-                return AppType.Teacher;
-            case 2:
-                return AppType.Parent;
+        public String getServerUrl() {
+            return SERVERADDRESS + ":" + SERVERPORT + "/app";
         }
-        return AppType.Parent;
     }
 }

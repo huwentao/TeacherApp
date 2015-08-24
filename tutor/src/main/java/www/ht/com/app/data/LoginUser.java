@@ -5,19 +5,28 @@ package www.ht.com.app.data;
  * 登录用户对象
  */
 public class LoginUser {
-    private String loginId;
-    private String passwd;
-    private String UserName;
-    private String agent;
-    private String token;
-    private Long refreshTime;
+    private String id;//
+    private String userName;//
+    private String token;//
+    private String telephone;//
+    private String password;//
+    private String deviceId;//
+    private String loginName;//
 
-    public Long getRefreshTime() {
-        return refreshTime;
+    public String getId() {
+        return id;
     }
 
-    public void setRefreshTime(Long refreshTime) {
-        this.refreshTime = refreshTime;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getToken() {
@@ -28,35 +37,35 @@ public class LoginUser {
         this.token = token;
     }
 
-    public String getLoginId() {
-        return loginId;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
-    public String getPasswd() {
-        return passwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getUserName() {
-        return UserName;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
-    public String getAgent() {
-        return agent;
+    public String getLoginName() {
+        return loginName;
     }
 
-    public void setAgent(String agent) {
-        this.agent = agent;
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 }

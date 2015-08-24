@@ -64,6 +64,75 @@ public class TutorApplication extends Application {
         return dbUtils;
     }
 
+    public Config getAppConfig() {
+        return appConfig;
+    }
+
+    public void setAppConfig(AppType appType) {
+        initConfig(appType);
+    }
+
+    /**
+     * 保存用户登录信息
+     *
+     * @param loginUser 当前登录用户
+     */
+    public void login(LoginUser loginUser) {
+        mLoginUser = loginUser;
+        SharedPreferences sharedPref = getSharedPreferences(Config.LOGIN_LOGININFO, Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = sharedPref.edit();
+        edit.putString(Config.LOGIN_LOGINID, loginUser.getTelephone());
+        edit.putString(Config.LOGIN_TOKEN, loginUser.getToken());
+        edit.putString(Config.LOGIN_USERNAME, loginUser.getUserName());
+//        edit.putString(Config.LOGIN_AGENT, loginUser.get());
+//        edit.putLong(Config.LOGIN_REFRESHTIME, loginUser.getRefreshTime());
+        edit.putInt(Config.LOGIN_TYPE, appConfig.getAppType().getType());
+        edit.putLong(Config.LOGIN_LOGINEDTIME, DateTime.now().getMillis());
+        edit.apply();
+    }
+
+    /**
+     * 加载已登录用户 信息
+     *
+     * @return
+     */
+    public LoginUser initLoginInfo() {
+        ///////////////////////////////
+        ///////加载已登录用户 信息/////////
+        SharedPreferences sharedPref = getSharedPreferences(Config.LOGIN_LOGININFO, Context.MODE_PRIVATE);
+        long refreshTime = sharedPref.getLong(Config.LOGIN_REFRESHTIME, 0);
+        long loginedTime = sharedPref.getLong(Config.LOGIN_LOGINEDTIME, 0);
+        long tokenTime = refreshTime - DateTime.now().getMillis() + loginedTime;
+        //失效前一天更新token
+        if (tokenTime > 1000 * 60 * 60 * 24) {
+            mLoginUser = new LoginUser();
+            mLoginUser.setTelephone(sharedPref.getString(Config.LOGIN_LOGINID, null));
+            mLoginUser.setToken(sharedPref.getString(Config.LOGIN_TOKEN, null));
+            mLoginUser.setUserName(sharedPref.getString(Config.LOGIN_USERNAME, null));
+//            mLoginUser.setAgent(sharedPref.getString(Config.LOGIN_AGENT, null));
+//            mLoginUser.setRefreshTime(sharedPref.getLong(Config.LOGIN_REFRESHTIME, 0));
+            ////////////////////////////////////
+            ////////初始化登录用户类型/////////////
+            int type = sharedPref.getInt(Config.LOGIN_TYPE, 1);
+            initConfig(Config.getAppType(type));
+        } else {
+            //TODO refresh token
+        }
+        return mLoginUser;
+    }
+
+    /**
+     * 取得当前登录用户
+     *
+     * @return
+     */
+    public LoginUser getLoginUser() {
+        return mLoginUser;
+    }
+
+    public boolean isLogined() {
+        return mLoginUser != null;
+    }
 
     /**
      * 监听所有Acitivty的生命周期
@@ -103,75 +172,5 @@ public class TutorApplication extends Application {
         public void onActivityDestroyed(Activity activity) {
             Logger.d(activity.getTitle().toString() + "(" + ((BaseActivity) activity).getName() + ") onDestoryed");
         }
-    }
-
-    public Config getAppConfig() {
-        return appConfig;
-    }
-
-    public void setAppConfig(AppType appType) {
-        initConfig(appType);
-    }
-
-    /**
-     * 保存用户登录信息
-     *
-     * @param loginUser 当前登录用户
-     */
-    public void login(LoginUser loginUser) {
-        mLoginUser = loginUser;
-        SharedPreferences sharedPref = getSharedPreferences(Config.LOGIN_LOGININFO, Context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = sharedPref.edit();
-        edit.putString(Config.LOGIN_LOGINID, loginUser.getLoginId());
-        edit.putString(Config.LOGIN_TOKEN, loginUser.getToken());
-        edit.putString(Config.LOGIN_USERNAME, loginUser.getUserName());
-        edit.putString(Config.LOGIN_AGENT, loginUser.getAgent());
-        edit.putLong(Config.LOGIN_REFRESHTIME, loginUser.getRefreshTime());
-        edit.putInt(Config.LOGIN_TYPE, appConfig.getAppType().getType());
-        edit.putLong(Config.LOGIN_LOGINEDTIME, DateTime.now().getMillis());
-        edit.apply();
-    }
-
-    /**
-     * 加载已登录用户 信息
-     *
-     * @return
-     */
-    public LoginUser initLoginInfo() {
-        ///////////////////////////////
-        ///////加载已登录用户 信息/////////
-        SharedPreferences sharedPref = getSharedPreferences(Config.LOGIN_LOGININFO, Context.MODE_PRIVATE);
-        long refreshTime = sharedPref.getLong(Config.LOGIN_REFRESHTIME, 0);
-        long loginedTime = sharedPref.getLong(Config.LOGIN_LOGINEDTIME, 0);
-        long tokenTime = refreshTime - DateTime.now().getMillis() + loginedTime;
-        //失效前一天更新token
-        if (tokenTime > 1000 * 60 * 60 * 24) {
-            mLoginUser = new LoginUser();
-            mLoginUser.setLoginId(sharedPref.getString(Config.LOGIN_LOGINID, null));
-            mLoginUser.setToken(sharedPref.getString(Config.LOGIN_TOKEN, null));
-            mLoginUser.setUserName(sharedPref.getString(Config.LOGIN_USERNAME, null));
-            mLoginUser.setAgent(sharedPref.getString(Config.LOGIN_AGENT, null));
-            mLoginUser.setRefreshTime(sharedPref.getLong(Config.LOGIN_REFRESHTIME, 0));
-            ////////////////////////////////////
-            ////////初始化登录用户类型/////////////
-            int type = sharedPref.getInt(Config.LOGIN_TYPE, 1);
-            initConfig(Config.getAppType(type));
-        } else {
-            //TODO refresh token
-        }
-        return mLoginUser;
-    }
-
-    /**
-     * 取得当前登录用户
-     *
-     * @return
-     */
-    public LoginUser getLoginUser() {
-        return mLoginUser;
-    }
-
-    public boolean isLogined() {
-        return mLoginUser != null;
     }
 }
