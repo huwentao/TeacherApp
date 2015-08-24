@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+ */
+
 package www.ht.com.app.config;
 
 /**
@@ -64,7 +68,7 @@ public class Config {
         return mAppType;
     }
 
-    public ServerConfig getmServerConfig() {
+    public ServerConfig getServerConfig() {
         return mServerConfig;
     }
 

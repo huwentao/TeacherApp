@@ -43,7 +43,7 @@ public class TeacherTest extends ApplicationTestCase<TutorApplication> {
         createApplication();
         TutorApplication tutorApplication = getApplication();
         Config config = tutorApplication.getAppConfig();
-        APPRequest.serverConfig = config.getmServerConfig();
+        APPRequest.serverConfig = config.getServerConfig();
         okHttpClient = new OkHttpClient();
         okHttpClient.interceptors().add(new LoggingInterceptor());
         Logger.init();

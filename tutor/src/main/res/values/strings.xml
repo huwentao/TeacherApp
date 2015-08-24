@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
+  -->
+
 <resources>
     <string name="app_name">开心家教</string>
 
@@ -100,4 +104,5 @@
     <string name="title_activity_parent_talk">ParentTalkActivity</string>
     <string name="title_activity_teacher_talk">TeacherTalkActivity</string>
     <string name="title_activity_communication">CommunicationActivity</string>
+    <string name="title_activity_test_login">TestLoginActivity</string>
 </resources>
