@@ -10,13 +10,13 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="www.ht.com.app.ui.activity.TestLoginActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="第三方SDK登录" />
+
 
     <Button
         android:id="@+id/weibo"

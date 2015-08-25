@@ -14,7 +14,7 @@ import com.squareup.okhttp.Response;
 import java.io.IOException;
 
 import www.ht.com.app.config.Config;
-import www.ht.com.app.net.APPRequest;
+import www.ht.com.app.net.TestRequest;
 import www.ht.com.app.net.LoggingInterceptor;
 import www.ht.com.app.ui.core.TutorApplication;
 
@@ -35,7 +35,7 @@ public class RegisterTest extends ApplicationTestCase<TutorApplication> {
         createApplication();
         TutorApplication tutorApplication = getApplication();
         Config config = tutorApplication.getAppConfig();
-        APPRequest.serverConfig = config.getServerConfig();
+        TestRequest.serverConfig = config.getServerConfig();
         okHttpClient = new OkHttpClient();
         okHttpClient.interceptors().add(new LoggingInterceptor());
         Logger.init();
@@ -47,7 +47,7 @@ public class RegisterTest extends ApplicationTestCase<TutorApplication> {
     }
 
     public void getVerfyCode() {
-        Request request = APPRequest.getRegisterCode("18566295788");
+        Request request = TestRequest.getRegisterCode("18566295788");
         try {
             Response response = okHttpClient.newCall(request).execute();
             Logger.d(response.body().string());
@@ -57,7 +57,7 @@ public class RegisterTest extends ApplicationTestCase<TutorApplication> {
     }
 
     public void register() {
-        Request request = APPRequest.getRegister("1", "18566295788", "123456", "柳红", "123456");
+        Request request = TestRequest.getRegister("1", "18566295788", "123456", "柳红", "123456");
         try {
             Response response = okHttpClient.newCall(request).execute();
             Logger.d(response.body().string());

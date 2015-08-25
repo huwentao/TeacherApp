@@ -16,7 +16,7 @@ import com.squareup.okhttp.Response;
 import java.io.IOException;
 
 import www.ht.com.app.config.Config;
-import www.ht.com.app.net.APPRequest;
+import www.ht.com.app.net.TestRequest;
 import www.ht.com.app.net.LoggingInterceptor;
 import www.ht.com.app.ui.core.TutorApplication;
 
@@ -38,7 +38,7 @@ public class LoginTest extends ApplicationTestCase<TutorApplication> {
         createApplication();
         TutorApplication tutorApplication = getApplication();
         Config config = tutorApplication.getAppConfig();
-        APPRequest.serverConfig = config.getServerConfig();
+        TestRequest.serverConfig = config.getServerConfig();
         okHttpClient = new OkHttpClient();
         okHttpClient.interceptors().add(new LoggingInterceptor());
         Logger.init();
@@ -47,7 +47,7 @@ public class LoginTest extends ApplicationTestCase<TutorApplication> {
     }
 
     public void testLogin() {
-        Request request = APPRequest.login("18566295788", "123450", deviceId);
+        Request request = TestRequest.login("18566295788", "123450", deviceId);
         try {
             Response response = okHttpClient.newCall(request).execute();
             String bodyString = response.body().string();
@@ -63,7 +63,7 @@ public class LoginTest extends ApplicationTestCase<TutorApplication> {
     }
 
     public void getNewPasswdCode() {
-        Request request = APPRequest.getNewPasswdCode("18566295788");
+        Request request = TestRequest.getNewPasswdCode("18566295788");
         try {
             Response response = okHttpClient.newCall(request).execute();
             Logger.d(response.body().string());
@@ -73,7 +73,7 @@ public class LoginTest extends ApplicationTestCase<TutorApplication> {
     }
 
     public void setNewPassword() {
-        Request request = APPRequest.setNewPassword("18566295788", "123458", "111111");
+        Request request = TestRequest.setNewPassword("18566295788", "123458", "111111");
         try {
             Response response = okHttpClient.newCall(request).execute();
             Logger.json(response.body().string());

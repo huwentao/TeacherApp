@@ -105,4 +105,5 @@
     <string name="title_activity_teacher_talk">TeacherTalkActivity</string>
     <string name="title_activity_communication">CommunicationActivity</string>
     <string name="title_activity_test_login">TestLoginActivity</string>
+    <string name="title_activity_wbshare">WBShareActivity</string>
 </resources>

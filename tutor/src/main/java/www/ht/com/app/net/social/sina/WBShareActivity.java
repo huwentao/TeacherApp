@@ -1,44 +1,25 @@
-/*
- * Copyright (c) 2015 huwentao (vernon.huwt@gmail.com)
- */
+package www.ht.com.app.net.social.sina;
 
-package www.ht.com.app.ui.activity;
-
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import butterknife.OnClick;
 import www.ht.com.app.R;
-import www.ht.com.app.ui.core.BaseActivity;
 
-public class TestLoginActivity extends BaseActivity {
-
+public class WBShareActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_login);
+        setContentView(R.layout.activity_wbshare);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_test_login, menu);
+        getMenuInflater().inflate(R.menu.menu_wbshare, menu);
         return true;
-    }
-
-    @OnClick({R.id.weibo, R.id.weixin, R.id.qqLogin})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.weixin:
-                break;
-            case R.id.weibo:
-                break;
-            case R.id.qqLogin:
-                break;
-        }
     }
 
     @Override

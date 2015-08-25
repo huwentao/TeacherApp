@@ -9,7 +9,7 @@ android {
         config {
             keyAlias 'buildKey'
             keyPassword 'buildKey_20150806'
-            storeFile file('/home/mokey/Android/buildKey_20150806.jks')
+            storeFile file('D:/Android/buildKey/buildKey_20150806.jks')
             storePassword '20150806'
         }
     }
