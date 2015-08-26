@@ -7,6 +7,7 @@ package www.ht.com.app.ui.core;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -21,6 +22,7 @@ import www.ht.com.app.config.AppType;
 import www.ht.com.app.config.Config;
 import www.ht.com.app.data.LoginUser;
 import www.ht.com.app.db.DbUtils;
+import www.ht.com.app.service.WorkService;
 
 /**
  * Created by mokey on 2015/8/4.
@@ -34,11 +36,26 @@ public class TutorApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        CrashHandler crashHandler = CrashHandler.getInstance();
+        // 注册crashHandler
+        crashHandler.init(getApplicationContext());
+        // 发送以前没发送的报告(可选)
+        crashHandler.sendPreviousReportsToServer();
+
         LOGTAG = getPackageName();
         initConfig(AppType.Parent);
         dbUtils = DbUtils.create(this);
         registerActivityLifecycleCallbacks(new HTActivityLifecycleCallbacks());
         SDKInitializer.initialize(getApplicationContext());//因此我们建议该方法放在Application的初始化方法中
+
+
+        Intent intent = new Intent(this, WorkService.class);
+        startService(intent);
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
     }
 
     /**
