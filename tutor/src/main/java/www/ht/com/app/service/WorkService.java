@@ -13,12 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 public class WorkService extends Service {
     ExecutorService executorService;
-    private int threadCount = 5;
+    private final static int THREAD_COUNT = 5;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        executorService = Executors.newFixedThreadPool(threadCount);
+        executorService = Executors.newFixedThreadPool(THREAD_COUNT);
     }
 
     @Override
